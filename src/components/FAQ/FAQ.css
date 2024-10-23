@@ -1,0 +1,89 @@
+.faq {
+  width: 100%; /* Adjust width as per your design */
+  margin: 20px 0px;
+  font-family: Arial, sans-serif;
+  padding-left: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+
+.faq-item {
+  /* border-bottom: 1px solid #e0e0e0; */
+  padding: 10px 0;
+}
+
+.faq-title {
+  cursor: pointer;
+  font-size: 22px;
+  color: black; /* Matching the purple heading color */
+  font-weight: 400;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.faq-title:hover {
+  color: #28aa4a; /* Darker purple on hover */
+}
+
+.faq-content {
+  font-size: 18px;
+  color: #4a4a4a; /* Grayish color for the paragraph */
+  margin: 10px 0;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease;
+  padding-left: 1rem;
+}
+.faq ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+  margin-left: 2rem;
+}
+
+.faq li {
+  margin-bottom: 5px;
+  list-style-type: disc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 1024px) {
+  .faq {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .faq {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 768px) {
+  .faq {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

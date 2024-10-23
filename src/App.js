@@ -10,6 +10,7 @@ import StaffingSolutions from "./pages/Service/StaffingSolutions";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
 import Error from "./pages/404/Error";
+import FAQ from "./pages/FAQ/FAQ";
 import "./App.css";
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/staffing-solutions" element={<StaffingSolutions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
