@@ -11,6 +11,7 @@ import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
 import Error from "./pages/404/Error";
 import FAQ from "./pages/FAQ/FAQ";
+import Jobs from "./pages/Jobs/Jobs";
 import "./App.css";
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/jobs" element={<Jobs />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
