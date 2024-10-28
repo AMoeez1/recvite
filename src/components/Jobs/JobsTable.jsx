@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import './JobsTable.css';
-
+import { Link } from 'react-router-dom';
 const JobTable = () => {
   const [jobs] = useState([
-    { title: 'Market and Credit Risk Specialist', industry: 'Finance', location: 'Doha, Qatar' },
-    { title: 'Incubation Specialist', industry: 'Banking', location: 'Doha, Qatar' },
-    { title: 'Financial Specialist', industry: 'Banking', location: 'Doha, Qatar' },
-    { title: 'Product Development Officer', industry: 'Banking', location: 'Doha, Qatar' },
+    { title: 'Market and Credit Risk Specialist', industry: 'Finance', location: 'Doha, Qatar', description: 'Responsible for analyzing market and credit risks.' },
+    { title: 'Incubation Specialist', industry: 'Banking', location: 'Doha, Qatar', description: 'Focus on developing and incubating new financial products.' },
+    { title: 'Financial Specialist', industry: 'Banking', location: 'Doha, Qatar', description: 'Manage financial resources and provide financial guidance.' },
+    { title: 'Product Development Officer', industry: 'Banking', location: 'Doha, Qatar', description: 'Oversee the development of new banking products.' },
   ]);
-
   return (
     <div className="job-table-container">
       <h2>Jobs</h2>
@@ -46,11 +45,19 @@ const JobTable = () => {
         <tbody>
           {jobs.map((job, index) => (
             <tr key={index}>
-              <td className='job-title'>{job.title}</td>
+              <td className='job-table-title'>{job.title}</td>
               <td>{job.industry}</td>
               <td>{job.location}</td>
               <td>
-                <a href="#" className="details-link">More Details ➔</a>
+             
+<Link 
+  to={`/job-detail/${index}`} 
+  state={{ title: job.title, description: job.description }}
+  className="details-link"
+>
+  More Details ➔
+</Link>
+
               </td>
             </tr>
           ))}

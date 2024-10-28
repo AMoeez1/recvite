@@ -76,8 +76,9 @@
     text-decoration: none;
   }
 
-  .job-title{
+  .job-table-title{
     color: #0956aa;
+    font-size: 16px;
   }
   
   .details-link:hover {

@@ -12,6 +12,9 @@ import About from "./pages/About/About";
 import Error from "./pages/404/Error";
 import FAQ from "./pages/FAQ/FAQ";
 import Jobs from "./pages/Jobs/Jobs";
+import JobDetail from "./pages/JobDetail/JobDetail";
+import Recruiting from "./pages/Recruiting/Recruiting";
+import Development from "./pages/Development/Development";
 import "./App.css";
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/job-detail/:id" element={<JobDetail />} />
+        <Route path="/recruiting" element={<Recruiting />} />
+        <Route path="/development" element={<Development />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

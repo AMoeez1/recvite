@@ -1,0 +1,75 @@
+.job-detail-section {
+    font-family: Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .job-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+  }
+  
+  .job-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .job-info p strong {
+    font-weight: bold;
+  }
+  
+  .job-summary,
+  .job-responsibilities {
+    margin-top: 30px;
+  }
+  
+  .job-summary h2,
+  .job-responsibilities h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+  }
+  
+  .job-summary p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .job-responsibilities ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .job-responsibilities li {
+    font-size: 1rem;
+    margin: 5px 0;
+    list-style-type: disc;
+    /* line-height: normal;
+    letter-spacing: normal; */
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .apply-button {
+    background-color: #28aa4a;; /* Purple background */
+    color: #ffffff; /* White text color */
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .apply-button:hover {
+    background-color: #272727;; /* Slightly darker shade on hover */
+
+  }
+  
