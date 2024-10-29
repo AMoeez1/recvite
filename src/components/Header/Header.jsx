@@ -88,7 +88,7 @@ const Header = () => {
                 <ul className="navigation clearfix">
                   <li className="current dropdown">
                     <Link to="/">Home</Link>
-                    <ul>
+                    {/* <ul>
                       <li>
                         <Link to="/">Home Page 01</Link>
                       </li>
@@ -112,9 +112,9 @@ const Header = () => {
                           </li>
                         </ul>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
-                  <li className="dropdown">
+                  {/* <li className="dropdown">
                     <Link to="/">Pages</Link>
                     <ul>
                       <li>
@@ -130,10 +130,10 @@ const Header = () => {
                         <Link to="/error">404</Link>
                       </li>
                     </ul>
-                  </li>
+                  </li> */}
                   <li className="dropdown">
-                    <Link to="/">Our Solutions</Link>
-                    <ul>
+                    <Link to="/service">Services</Link>
+                    {/* <ul>
                       <li>
                         <Link to="/service">Our Solutions</Link>
                       </li>
@@ -159,8 +159,16 @@ const Header = () => {
                       <li>
                         <Link to="/staff-management">Staff Management</Link>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
+
+                  <li className="dropdown">
+                    <Link to="/capabilities">Capabilities</Link>
+                    
+                  </li>
+
+
+                  
 
                   <li className="dropdown">
                     <Link to="/">Industries</Link>
@@ -375,7 +383,7 @@ const Header = () => {
                 <ul className="navigation clearfix">
                   <li className="current dropdown">
                     <Link to="/">Home</Link>
-                    <ul>
+                    {/* <ul>
                       <li>
                         <Link to="/">Home Page 01</Link>
                       </li>
@@ -399,9 +407,9 @@ const Header = () => {
                           </li>
                         </ul>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
-                  <li className="dropdown">
+                  {/* <li className="dropdown">
                     <Link to="/">Pages</Link>
                     <ul>
                       <li>
@@ -417,10 +425,10 @@ const Header = () => {
                         <Link to="/error">404</Link>
                       </li>
                     </ul>
-                  </li>
+                  </li> */}
                   <li className="dropdown">
-                    <Link to="/">Our Solutions</Link>
-                    <ul>
+                    <Link to="/service">Services</Link>
+                    {/* <ul>
                       <li>
                         <Link to="/service">Our Solutions</Link>
                       </li>
@@ -446,7 +454,12 @@ const Header = () => {
                       <li>
                         <Link to="/staff-management">Staff Management</Link>
                       </li>
-                    </ul>
+                    </ul> */}
+                  </li>
+
+                  <li className="dropdown">
+                    <Link to="/capabilities">Capabilities</Link>
+                    
                   </li>
 
                   <li className="dropdown">
