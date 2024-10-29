@@ -17,7 +17,7 @@ import Cta from "../../components/CtaStyletwo/Cta";
 const About = () => {
   return (
     <div className="page-wrapper">
-      <div class="preloader"></div>
+      {/* <div class="preloader"></div> */}
       <Header />
       <MobileMenu />
       <PageTitle title={"About Us"} text={"About"} />

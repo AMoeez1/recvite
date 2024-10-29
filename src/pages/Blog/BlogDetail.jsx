@@ -11,7 +11,7 @@ import SidebarPageContainer from "../../components/BlogDetail/Sidebar/Sidebar";
 const BlogDetail = () => {
   return (
     <div className="page-wrapper">
-      <div class="preloader"></div>
+      {/* <div class="preloader"></div> */}
       <Header />
       <MobileMenu />
       <PageTitle title={'Blog Post'} text={"Blog Details"} />

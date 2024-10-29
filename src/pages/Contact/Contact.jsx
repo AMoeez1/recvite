@@ -12,7 +12,7 @@ import GoogleMap from "../../components/Contact/Goggle-map/GoogleMap";
 const Contact = () => {
   return (
     <div className="page-wrapper">
-      <div class="preloader"></div>
+      {/* <div class="preloader"></div> */}
       <Header />
       <MobileMenu />
       <PageTitle title={"Contact Us"} text={"Contact"} />

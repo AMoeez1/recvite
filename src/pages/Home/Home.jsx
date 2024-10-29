@@ -22,7 +22,7 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <div className="page-wrapper">
-      <div class="preloader"></div>
+      {/* <div class="preloader"></div> */}
       <Header />
       <MobileMenu />
       <BannerSection />

@@ -12,7 +12,7 @@ import Footer from "../../components/Footer/Footer";
 const Blog = () => {
   return (
     <div className="page-wrapper">
-      <div class="preloader"></div>
+      {/* <div class="preloader"></div> */}
       <Header />
       <MobileMenu />
       <PageTitle title={'Blog Post'} text={'Blog Grid'} />

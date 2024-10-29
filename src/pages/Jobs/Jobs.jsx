@@ -9,7 +9,7 @@ import JobsTable from '../../components/Jobs/JobsTable'
 const Jobs = () => {
   return (
     <div className="page-wrapper">
-    <div class="preloader"></div>
+    {/* <div class="preloader"></div> */}
     <Header />
     <MobileMenu />
     <PageTitle title={"Jobs"} text={"Jobs"} />

@@ -11,7 +11,7 @@ import ServicePageSection from "../../components/Service/Service-section/Service
 const Service = () => {
   return (
     <div className="page-wrapper">
-      <div class="preloader"></div>
+      {/* <div class="preloader"></div> */}
       <Header />
       <MobileMenu />
       <PageTitle title={'Our Solutions'} text={'Our Solutions'} />

@@ -86,6 +86,9 @@ const Footer = () => {
               <li>
                 <Link to="/">Site Map</Link>
               </li>
+              <li>
+                <Link to="/faq">FAQs</Link>
+              </li>
             </ul>
           </div>
         </div>

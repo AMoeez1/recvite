@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <div className="page-wrapper">
-      <div class="preloader"></div>
+      {/* <div class="preloader"></div> */}
       <Header />
       <MobileMenu />
       <PageTitle title={"404"} text={"404"} />

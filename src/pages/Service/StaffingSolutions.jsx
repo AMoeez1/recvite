@@ -8,7 +8,7 @@ import ServiceDetails from "../../components/Service/ServiceDetail/ServiceDetail
 const StaffingSolutiona = () => {
   return (
     <div className="page-wrapper">
-      <div class="preloader"></div>
+      {/* <div class="preloader"></div> */}
       <Header />
       <MobileMenu />
       <PageTitle title={'Staffing Solutions'} text={'Service Details'} />

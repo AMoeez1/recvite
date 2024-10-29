@@ -8,7 +8,7 @@ import MobileMenu from '../../components/MobileMenu/MobileMenu'
 const FAQ = () => {
   return (
     <div className="page-wrapper">
-    <div class="preloader"></div>
+    {/* <div class="preloader"></div> */}
     <Header />
     <MobileMenu />
     <PageTitle title={"FAQ"} text={"FAQ"} />
