@@ -57,6 +57,7 @@ const Footer = () => {
                     "Pricing & Plans",
                     "Our Departments",
                   ]}
+                 
                   className="ml-30"
                 />
               </div>
