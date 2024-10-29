@@ -39,11 +39,12 @@ const Footer = () => {
                 <LinksWidget
                   title="Explore"
                   links={[
-                    "About",
-                    "Our Solutions",
-                    "Team Members",
-                    "News & Articles",
-                    "Contact Us",
+                    { label: "About", path: "/about" },
+                    { label: "Our Solutions", path: "/service" },
+                    { label: "Team Members", path: "/" },
+                    { label: "News & Articles", path: "/blog" },
+                    { label: "Contact Us", path: "/contact" },
+                    { label: "FAQs", path: "/faq" },
                   ]}
                 />
               </div>
@@ -51,13 +52,12 @@ const Footer = () => {
                 <LinksWidget
                   title="Links"
                   links={[
-                    "Employers",
-                    "Job Seekers",
-                    "How It Works",
-                    "Pricing & Plans",
-                    "Our Departments",
+                    { label: "Employers", path: "/" },
+                    { label: "Job Seekers", path: "/" },
+                    { label: "How It Works", path: "/" },
+                    { label: "Pricing & Plans", path: "/" },
+                    { label: "Our Departments", path: "/" },
                   ]}
-                 
                   className="ml-30"
                 />
               </div>
@@ -78,16 +78,13 @@ const Footer = () => {
             </div>
             <ul className="footer-nav pull-right">
               <li>
-                <Link to="/">Privacy Policy</Link>
+                <Link to="/privacy-policy">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/">Terms & Conditions</Link>
+                <Link to="/terms">Terms & Conditions</Link>
               </li>
               <li>
-                <Link to="/">Site Map</Link>
-              </li>
-              <li>
-                <Link to="/faq">FAQs</Link>
+                <Link to="/site-map">Site Map</Link>
               </li>
             </ul>
           </div>
@@ -167,7 +164,7 @@ const LinksWidget = ({ title, links, className = "" }) => (
       <ul className="links-list clearfix">
         {links.map((link, index) => (
           <li key={index}>
-            <Link to="/">{link}</Link>
+            <Link to={link.path}>{link.label}</Link>
           </li>
         ))}
       </ul>
