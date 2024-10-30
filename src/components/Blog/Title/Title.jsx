@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const PageTitle = ({ text, title, desc }) => {
+const PageTitle = ({ text, title, desc, detail }) => {
   return (
     // Page Title
     <section
@@ -14,18 +14,23 @@ const PageTitle = ({ text, title, desc }) => {
           <div className="title">
             <h1>{title}</h1>
           </div>
-          { text &&
+          {text && (
             <ul className="bread-crumb clearfix">
               <li>
                 <Link to="/">Home</Link>
               </li>
               <li>{text}</li>
             </ul>
-          }
+          )}
 
-          {
-            desc && <p className="bread-crumb clearfix" style={{color:'#fff', maxWidth:'70vw',justifySelf:'center'}}>{desc}</p>
-          }
+          {desc && (
+            <p
+              className="bread-crumb clearfix"
+              style={{ color: "#fff", maxWidth: "70vw", justifySelf: "center" }}
+            >
+              {desc}
+            </p>
+          )}
         </div>
       </div>
     </section>

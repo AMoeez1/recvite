@@ -16,6 +16,7 @@ import JobDetail from "./pages/JobDetail/JobDetail";
 import Recruiting from "./pages/Recruiting/Recruiting";
 import Development from "./pages/Development/Development";
 import Capabilities from "./pages/Capabilities/Capabilities";
+import PositionDetail from "./pages/PositionDetail/PositionDetail";
 import "./App.css";
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/recruiting" element={<Recruiting />} />
         <Route path="/development" element={<Development />} />
         <Route path="/capabilities" element={<Capabilities />} />
+        <Route path="/position/:title" element={<PositionDetail />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
