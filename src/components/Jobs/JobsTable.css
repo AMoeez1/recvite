@@ -28,8 +28,33 @@
 
   /* JobTable.css */
 
-.search-input-table {
-    /* flex: 1; */
+  .search-input-container {
+    position: relative;
+    width: 30%;
+  }
+  
+  .search-input-table {
+    width: 100%;
+    /* padding-right: 30px; 
+    padding-left: 10px; */
+/* height: 35px;     */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+
+/* .search-input-table {
+    
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -38,10 +63,9 @@
     background-repeat: no-repeat;
     background-position:  11rem center;
     background-size: 16px;
-    /* padding-left: 36px; */
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
-  
+   */
   .search-input-table:focus {
     border-color: #007bff;
     box-shadow: 0 0 4px #007bff;
@@ -140,6 +164,10 @@
   
   /* Responsive Styling */
   @media (max-width: 768px) {
+    .search-input-container {
+    
+      width: 100%;
+    }
     .filters {
       flex-direction: column;
     }
@@ -161,4 +189,12 @@
         background-position: 31rem center;
     }
   }
+
+
+@media (max-width: 576px) {
+  .search-input-container {
+    
+    width: 100%;
+  }
+}
   
