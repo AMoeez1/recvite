@@ -1,27 +1,77 @@
-import React, { useState } from 'react';
-import './JobsTable.css';
-import { Link } from 'react-router-dom';
-import { FaSearch } from 'react-icons/fa';
+import React, { useState } from "react";
+import "./JobsTable.css";
+import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
+import { useEffect } from "react";
+
 
 const JobTable = () => {
   const [jobs] = useState([
-    { title: 'Market and Credit Risk Specialist', industry: 'Finance', type: 'Full-time', location: 'Doha, Qatar', description: 'Responsible for analyzing market and credit risks.' },
-    { title: 'Incubation Specialist', industry: 'Banking', type: 'Full-time', location: 'Doha, Qatar', description: 'Focus on developing and incubating new financial products.' },
-    { title: 'Financial Specialist', industry: 'Banking', type: 'Part-time', location: 'Remote', description: 'Manage financial resources and provide financial guidance.' },
-    { title: 'Product Development Officer', industry: 'Banking', type: 'Full-time', location: 'Doha, Qatar', description: 'Oversee the development of new banking products.' },
+    {
+      title: "Market and Credit Risk Specialist",
+      industry: "Finance",
+      type: "Full-time",
+      location: "Doha, Qatar",
+      description: "Responsible for analyzing market and credit risks.",
+    },
+    {
+      title: "Incubation Specialist",
+      industry: "Banking",
+      type: "Full-time",
+      location: "Doha, Qatar",
+      description: "Focus on developing and incubating new financial products.",
+    },
+    {
+      title: "Financial Specialist",
+      industry: "Banking",
+      type: "Part-time",
+      location: "Remote",
+      description: "Manage financial resources and provide financial guidance.",
+    },
+    {
+      title: "Product Development Officer",
+      industry: "Banking",
+      type: "Full-time",
+      location: "Doha, Qatar",
+      description: "Oversee the development of new banking products.",
+    },
   ]);
 
+  const [Apijobs, setApiJobs] = useState([]);
+
+  useEffect(() => {
+    // Fetch jobs from the API
+    const fetchJobs = async () => {
+      try {
+        const response = await fetch(
+          "https://test.hi5-consulting.com/all-jobs"
+        );
+        const data = await response.json();
+        console.log("All Jobs data from api :", data); // Log retrieved jobs data
+        setApiJobs(data); // Set the retrieved jobs data
+      } catch (error) {
+        console.error("Error fetching jobs:", error);
+      }
+    };
+
+    fetchJobs();
+  }, []);
+
   const [filters, setFilters] = useState({
-    industry: '',
-    type: '',
-    location: '',
-    search: '',
+    industry: "",
+    type: "",
+    location: "",
+    search: "",
   });
 
   const handleFilterChange = (filterKey, value) => {
     setFilters((prev) => ({
       ...prev,
-      [filterKey]: value === `All Job ${filterKey.charAt(0).toUpperCase() + filterKey.slice(1)}` ? '' : value,
+      [filterKey]:
+        value ===
+        `All Job ${filterKey.charAt(0).toUpperCase() + filterKey.slice(1)}`
+          ? ""
+          : value,
     }));
   };
 
@@ -46,32 +96,46 @@ const JobTable = () => {
     <div className="job-table-container">
       <h2>Jobs</h2>
       <div className="filters">
-      <div className="search-input-container">
-  <input
-    type="text"
-    placeholder="Search"
-    className="search-input-table"
-    value={filters.search}
-    onChange={handleSearchChange}
-  />
-  <FaSearch className="search-icon" />
-</div>
+        <div className="search-input-container">
+          <input
+            type="text"
+            placeholder="Search"
+            className="search-input-table"
+            value={filters.search}
+            onChange={handleSearchChange}
+          />
+          <FaSearch className="search-icon" />
+        </div>
 
         <div className="table-dropdown">
           <div
             className="table-dropdown-header"
-            onClick={() => handleFilterChange('industry', filters.industry ? '' : 'All Job Industry')}
+            onClick={() =>
+              handleFilterChange(
+                "industry",
+                filters.industry ? "" : "All Job Industry"
+              )
+            }
           >
-            {filters.industry || 'All Job Industry'}
+            {filters.industry || "All Job Industry"}
           </div>
           <div className="table-dropdown-menu">
-            <div className="table-dropdown-item" onClick={() => handleFilterChange('industry', 'Finance')}>
+            <div
+              className="table-dropdown-item"
+              onClick={() => handleFilterChange("industry", "Finance")}
+            >
               Finance
             </div>
-            <div className="table-dropdown-item" onClick={() => handleFilterChange('industry', 'Banking')}>
+            <div
+              className="table-dropdown-item"
+              onClick={() => handleFilterChange("industry", "Banking")}
+            >
               Banking
             </div>
-            <div className="table-dropdown-item" onClick={() => handleFilterChange('industry', 'Entertainment')}>
+            <div
+              className="table-dropdown-item"
+              onClick={() => handleFilterChange("industry", "Entertainment")}
+            >
               Entertainment
             </div>
           </div>
@@ -79,15 +143,23 @@ const JobTable = () => {
         <div className="table-dropdown">
           <div
             className="table-dropdown-header"
-            onClick={() => handleFilterChange('type', filters.type ? '' : 'All Job Type')}
+            onClick={() =>
+              handleFilterChange("type", filters.type ? "" : "All Job Type")
+            }
           >
-            {filters.type || 'All Job Type'}
+            {filters.type || "All Job Type"}
           </div>
           <div className="table-dropdown-menu">
-            <div className="table-dropdown-item" onClick={() => handleFilterChange('type', 'Full-time')}>
+            <div
+              className="table-dropdown-item"
+              onClick={() => handleFilterChange("type", "Full-time")}
+            >
               Full-time
             </div>
-            <div className="table-dropdown-item" onClick={() => handleFilterChange('type', 'Part-time')}>
+            <div
+              className="table-dropdown-item"
+              onClick={() => handleFilterChange("type", "Part-time")}
+            >
               Part-time
             </div>
           </div>
@@ -95,15 +167,26 @@ const JobTable = () => {
         <div className="table-dropdown">
           <div
             className="table-dropdown-header"
-            onClick={() => handleFilterChange('location', filters.location ? '' : 'All Job Location')}
+            onClick={() =>
+              handleFilterChange(
+                "location",
+                filters.location ? "" : "All Job Location"
+              )
+            }
           >
-            {filters.location || 'All Job Location'}
+            {filters.location || "All Job Location"}
           </div>
           <div className="table-dropdown-menu">
-            <div className="table-dropdown-item" onClick={() => handleFilterChange('location', 'Doha, Qatar')}>
+            <div
+              className="table-dropdown-item"
+              onClick={() => handleFilterChange("location", "Doha, Qatar")}
+            >
               Doha, Qatar
             </div>
-            <div className="table-dropdown-item" onClick={() => handleFilterChange('location', 'Remote')}>
+            <div
+              className="table-dropdown-item"
+              onClick={() => handleFilterChange("location", "Remote")}
+            >
               Remote
             </div>
           </div>
