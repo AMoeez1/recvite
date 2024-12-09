@@ -3,7 +3,7 @@ import "./CapabilitiesSection.css";
 const CapabilitiesSection = () => {
   return (
     <div className="recruitment-container">
-      <h1 className="rec_heading">Recruitment Process Outsourcing</h1>
+      <h2 className="rec_heading">Recruitment Process Outsourcing</h2>
       <hr className="divider" />
       <div className="sourcing-section">
         <div className="logos">

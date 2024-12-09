@@ -44,11 +44,11 @@ const JobTable = () => {
     const fetchJobs = async () => {
       try {
         const response = await fetch(
-          "https://test.hi5-consulting.com/all-jobs"
+          "https://test.hi5-consulting.com/api/all-jobs"
         );
         const data = await response.json();
-        console.log("All Jobs data from api :", data); // Log retrieved jobs data
-        setApiJobs(data); // Set the retrieved jobs data
+        console.log("All Jobs data from api :", data.data); // Log retrieved jobs data
+        setApiJobs(data.data); // Set the retrieved jobs data
       } catch (error) {
         console.error("Error fetching jobs:", error);
       }
@@ -82,13 +82,24 @@ const JobTable = () => {
     }));
   };
 
-  const filteredJobs = jobs.filter((job) => {
+  // const filteredJobs = jobs.filter((job) => {
+  //   const { industry, type, location, search } = filters;
+  //   return (
+  //     (!industry || job.industry === industry) &&
+  //     (!type || job.type === type) &&
+  //     (!location || job.location === location) &&
+  //     (!search || job.title.toLowerCase().includes(search.toLowerCase()))
+  //   );
+  // });
+
+
+  const filteredJobs = Apijobs.filter((job) => {
     const { industry, type, location, search } = filters;
     return (
-      (!industry || job.industry === industry) &&
-      (!type || job.type === type) &&
-      (!location || job.location === location) &&
-      (!search || job.title.toLowerCase().includes(search.toLowerCase()))
+      (!industry || job.job_industry === industry) &&
+      (!type || job.employment_type.toLowerCase() === type.toLowerCase()) &&
+      (!location || job.job_location.toLowerCase().includes(location.toLowerCase())) &&
+      (!search || job.job_title.toLowerCase().includes(search.toLowerCase()))
     );
   });
 
@@ -193,7 +204,7 @@ const JobTable = () => {
         </div>
       </div>
       <table className="job-table">
-        <tbody>
+        {/* <tbody>
           {filteredJobs.map((job, index) => (
             <tr key={index}>
               <td className="job-table-title">{job.title}</td>
@@ -204,6 +215,28 @@ const JobTable = () => {
                 <Link
                   to={`/job-detail/${index}`}
                   state={{ title: job.title, description: job.description }}
+                  className="details-link"
+                >
+                  More Details ➔
+                </Link>
+              </td>
+            </tr>
+          ))}
+        </tbody> */}
+        <tbody>
+          {filteredJobs.map((job, index) => (
+            <tr key={index}>
+              <td className="job-table-title">{job.job_title}</td>
+              <td>{job.job_industry}</td>
+              <td>{job.employment_type}</td>
+              <td>{job.job_location}</td>
+              <td>
+                <Link
+                  to={`/job-detail/${job.id}`}
+                  state={{
+                    title: job.job_title,
+                    description: job.long_description,
+                  }}
                   className="details-link"
                 >
                   More Details ➔

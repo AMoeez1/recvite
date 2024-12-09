@@ -10,7 +10,7 @@ import { FaSitemap } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
 import { GrCloudComputer } from "react-icons/gr";
 import { FaComputer, FaD } from "react-icons/fa6";
-import { SiMicrosoftsharepoint } from "react-icons/si";
+// import { SiMicrosoftsharepoint } from "react-icons/si";
 import { FaDev } from "react-icons/fa";
 import { FaDatabase } from "react-icons/fa";
 import { TbSitemap } from "react-icons/tb";
@@ -63,12 +63,12 @@ const recruiting_positions = [
     path: "software-engineer",
     detail: "Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy. Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy. Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy. Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy.",
   },
-  {
-    title: "SharePoint Developer",
-    logo: <SiMicrosoftsharepoint />,
-    path: "sharepoint-developer",
-    detail: "Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy. Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy. Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy. Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy.",
-  },
+  // {
+  //   title: "SharePoint Developer",
+  //   logo: <SiMicrosoftsharepoint />,
+  //   path: "sharepoint-developer",
+  //   detail: "Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy. Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy. Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy. Our experience with different realms of industries has gained us a unique expertise that makes our clients trust us and our process without hesitancy.",
+  // },
   {
     title: "PeopleSoft Developer",
     logo: <FaDev />,

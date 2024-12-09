@@ -88,78 +88,12 @@ const Header = () => {
                 <ul className="navigation clearfix">
                   <li className="current dropdown">
                     <Link to="/">Home</Link>
-                    {/* <ul>
-                      <li>
-                        <Link to="/">Home Page 01</Link>
-                      </li>
-                      <li>
-                        <Link to="/index-2">Home Page 02</Link>
-                      </li>
-                      <li>
-                        <Link to="/index-onepage">OnePage Home</Link>
-                      </li>
-                      <li>
-                        <Link to="/index-rtl">RTL Home</Link>
-                      </li>
-                      <li className="dropdown">
-                        <Link to="/">Header Style</Link>
-                        <ul>
-                          <li>
-                            <Link to="/">Header Style 01</Link>
-                          </li>
-                          <li>
-                            <Link to="/index-2">Header Style 02</Link>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul> */}
+                   
                   </li>
-                  {/* <li className="dropdown">
-                    <Link to="/">Pages</Link>
-                    <ul>
-                      <li>
-                        <Link to="/about">About Us</Link>
-                      </li>
-                      <li>
-                        <Link to="/project">Latest Projects</Link>
-                      </li>
-                      <li>
-                        <Link to="/project-details">Project Details</Link>
-                      </li>
-                      <li>
-                        <Link to="/error">404</Link>
-                      </li>
-                    </ul>
-                  </li> */}
+                  
                   <li className="dropdown">
                     <Link to="/service">Services</Link>
-                    {/* <ul>
-                      <li>
-                        <Link to="/service">Our Solutions</Link>
-                      </li>
-                      <li>
-                        <Link to="/hr-consulting">HR Consulting</Link>
-                      </li>
-                      <li>
-                        <Link to="/technology-resource">
-                          Technology Resource
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/staffing-solutions">Staffing Solutions</Link>
-                      </li>
-                      <li>
-                        <Link to="/corporate-program">Corporate Program</Link>
-                      </li>
-                      <li>
-                        <Link to="/leadership-training">
-                          Leadership Training
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/staff-management">Staff Management</Link>
-                      </li>
-                    </ul> */}
+                    
                   </li>
 
                   <li className="dropdown">
@@ -176,123 +110,13 @@ const Header = () => {
                       <li>
                         <Link to="/recruiting">Recruiting</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to="/development">Development</Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
 
-                  {/* <li className="dropdown">
-                    <Link to="/">Elements</Link>
-                    <div className="megamenu">
-                      <div className="row clearfix">
-                        <div className="col-lg-4 column">
-                          <ul>
-                            <li>
-                              <h4>Elements 1</h4>
-                            </li>
-                            <li>
-                              <Link to="/about-element-1">About Block 01</Link>
-                            </li>
-                            <li>
-                              <Link to="/about-element-2">About Block 02</Link>
-                            </li>
-                            <li>
-                              <Link to="/service-element-1">
-                                Service Block 01
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/service-element-2">
-                                Service Block 02
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/feature-element-1">
-                                Feature Block 01
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/feature-element-2">
-                                Feature Block 02
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/news-element-1">News Block 01</Link>
-                            </li>
-                            <li>
-                              <Link to="/news-element-2">News Block 02</Link>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="col-lg-4 column">
-                          <ul>
-                            <li>
-                              <h4>Elements 2</h4>
-                            </li>
-                            <li>
-                              <Link to="/team-element-1">Team Block 01</Link>
-                            </li>
-                            <li>
-                              <Link to="/team-element-2">Team Block 02</Link>
-                            </li>
-                            <li>
-                              <Link to="/funfact-element-1">
-                                Counter Block 01
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/funfact-element-2">
-                                Counter Block 02
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/process-element-1">
-                                Process Block 01
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/process-element-2">
-                                Process Block 02
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/agency-element">Agency Block</Link>
-                            </li>
-                            <li>
-                              <Link to="/skills-element">Skills Block</Link>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="col-lg-4 column">
-                          <ul>
-                            <li>
-                              <h4>Elements 3</h4>
-                            </li>
-                            <li>
-                              <Link to="/testimonial-element">
-                                Testimonial Block
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/clients-element">Clients Block</Link>
-                            </li>
-                            <li>
-                              <Link to="/cta-element">CTA Block</Link>
-                            </li>
-                            <li>
-                              <Link to="/video-element">Video Block</Link>
-                            </li>
-                            <li>
-                              <Link to="/feature-element-3">
-                                Feature Block 03
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li> */}
+           
 
                   <li className="dropdown">
                     <Link to="/jobs">Jobs</Link>
@@ -300,22 +124,12 @@ const Header = () => {
                   </li>
 
 
-                  <li className="dropdown">
+                  {/* <li className="dropdown">
                     <Link to="/blog">Blog</Link>
-                    {/* <ul>
-                      <li>
-                        <Link to="/blog">Blog Grid</Link>
-                      </li>
-                      <li>
-                        <Link to="/blog-2">Blog Standard</Link>
-                      </li>
-                      <li>
-                        <Link to="/blog-details">Blog Details</Link>
-                      </li>
-                    </ul> */}
-                  </li>
+                   
+                  </li> */}
                   <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>
@@ -383,78 +197,12 @@ const Header = () => {
                 <ul className="navigation clearfix">
                   <li className="current dropdown">
                     <Link to="/">Home</Link>
-                    {/* <ul>
-                      <li>
-                        <Link to="/">Home Page 01</Link>
-                      </li>
-                      <li>
-                        <Link to="/index-2">Home Page 02</Link>
-                      </li>
-                      <li>
-                        <Link to="/index-onepage">OnePage Home</Link>
-                      </li>
-                      <li>
-                        <Link to="/index-rtl">RTL Home</Link>
-                      </li>
-                      <li className="dropdown">
-                        <Link to="/">Header Style</Link>
-                        <ul>
-                          <li>
-                            <Link to="/">Header Style 01</Link>
-                          </li>
-                          <li>
-                            <Link to="/index-2">Header Style 02</Link>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul> */}
+                    
                   </li>
-                  {/* <li className="dropdown">
-                    <Link to="/">Pages</Link>
-                    <ul>
-                      <li>
-                        <Link to="/about">About Us</Link>
-                      </li>
-                      <li>
-                        <Link to="/project">Latest Projects</Link>
-                      </li>
-                      <li>
-                        <Link to="/project-details">Project Details</Link>
-                      </li>
-                      <li>
-                        <Link to="/error">404</Link>
-                      </li>
-                    </ul>
-                  </li> */}
+                 
                   <li className="dropdown">
                     <Link to="/service">Services</Link>
-                    {/* <ul>
-                      <li>
-                        <Link to="/service">Our Solutions</Link>
-                      </li>
-                      <li>
-                        <Link to="/hr-consulting">HR Consulting</Link>
-                      </li>
-                      <li>
-                        <Link to="/technology-resource">
-                          Technology Resource
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/staffing-solutions">Staffing Solutions</Link>
-                      </li>
-                      <li>
-                        <Link to="/corporate-program">Corporate Program</Link>
-                      </li>
-                      <li>
-                        <Link to="/leadership-training">
-                          Leadership Training
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/staff-management">Staff Management</Link>
-                      </li>
-                    </ul> */}
+                   
                   </li>
 
                   <li className="dropdown">
@@ -468,125 +216,14 @@ const Header = () => {
                       <li>
                         <Link to="/recruiting">Recruiting</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to="/development">Development</Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
 
 
-                  {/* <li className="dropdown">
-                    <Link to="/">Elements</Link>
-                    <div className="megamenu">
-                      <div className="row clearfix">
-                        <div className="col-lg-4 column">
-                          <ul>
-                            <li>
-                              <h4>Elements 1</h4>
-                            </li>
-                            <li>
-                              <Link to="/about-element-1">About Block 01</Link>
-                            </li>
-                            <li>
-                              <Link to="/about-element-2">About Block 02</Link>
-                            </li>
-                            <li>
-                              <Link to="/service-element-1">
-                                Service Block 01
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/service-element-2">
-                                Service Block 02
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/feature-element-1">
-                                Feature Block 01
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/feature-element-2">
-                                Feature Block 02
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/news-element-1">News Block 01</Link>
-                            </li>
-                            <li>
-                              <Link to="/news-element-2">News Block 02</Link>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="col-lg-4 column">
-                          <ul>
-                            <li>
-                              <h4>Elements 2</h4>
-                            </li>
-                            <li>
-                              <Link to="/team-element-1">Team Block 01</Link>
-                            </li>
-                            <li>
-                              <Link to="/team-element-2">Team Block 02</Link>
-                            </li>
-                            <li>
-                              <Link to="/funfact-element-1">
-                                Counter Block 01
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/funfact-element-2">
-                                Counter Block 02
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/process-element-1">
-                                Process Block 01
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/process-element-2">
-                                Process Block 02
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/agency-element">Agency Block</Link>
-                            </li>
-                            <li>
-                              <Link to="/skills-element">Skills Block</Link>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="col-lg-4 column">
-                          <ul>
-                            <li>
-                              <h4>Elements 3</h4>
-                            </li>
-                            <li>
-                              <Link to="/testimonial-element">
-                                Testimonial Block
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/clients-element">Clients Block</Link>
-                            </li>
-                            <li>
-                              <Link to="/cta-element">CTA Block</Link>
-                            </li>
-                            <li>
-                              <Link to="/video-element">Video Block</Link>
-                            </li>
-                            <li>
-                              <Link to="/feature-element-3">
-                                Feature Block 03
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li> */}
-
+               
                   <li className="dropdown">
                     <Link to="/jobs">Jobs</Link>
 
@@ -595,22 +232,12 @@ const Header = () => {
 
 
 
-                  <li className="dropdown">
+                  {/* <li className="dropdown">
                     <Link to="/">Blog</Link>
-                    {/* <ul>
-                      <li>
-                        <Link to="/blog">Blog Grid</Link>
-                      </li>
-                      <li>
-                        <Link to="/blog-2">Blog Standard</Link>
-                      </li>
-                      <li>
-                        <Link to="/blog-details">Blog Details</Link>
-                      </li>
-                    </ul> */}
-                  </li>
+                   
+                  </li> */}
                   <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>

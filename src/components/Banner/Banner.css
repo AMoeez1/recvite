@@ -1,0 +1,127 @@
+/* SearchBar.css */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60vw;
+    max-width: 800px;
+    margin: auto;
+    padding-bottom: 2rem;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .input-label {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 5px;
+  }
+  
+  .search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #007bff;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 10px;
+    top: 44px;
+    font-size: 16px;
+    color: #6c757d;
+  }
+  
+  .find-jobs-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+  }
+  
+  .find-jobs-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  /* Dropdown styles */
+.city-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.cities-dropdown-menu {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+
+  
+}
+
+.city-drop-item{
+  padding: 10px 12px;
+}
+
+.cit-dropdown {
+  padding: 8px 12px !important;
+  font-size: 14px;
+  color: #495057;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Loader z-index and spacing adjustments */
+/* .find-jobs-button {
+  margin-top: 1rem;
+} */
+
+/* Ensure dropdown-menu does not overflow container */
+.search-bar {
+  flex-wrap: wrap;
+  position: relative;
+}
