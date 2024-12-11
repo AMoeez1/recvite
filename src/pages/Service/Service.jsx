@@ -8,6 +8,8 @@ import PageTitle from "../../components/Blog/Title/Title";
 
 import Footer from "../../components/Footer/Footer";
 import ServicePageSection from "../../components/Service/Service-section/ServiceSection";
+import SectionThree from "../../components/Home/section3/SectionThree";
+import ServiceSectionOne from "../../components/Service/section1/ServiceSectionOne"
 const Service = () => {
   return (
     <div className="page-wrapper">
@@ -15,7 +17,14 @@ const Service = () => {
       <Header />
       <MobileMenu />
       <PageTitle title={'Our Solutions'} text={'Our Solutions'} />
-    <ServicePageSection />
+
+      <SectionThree serv/>
+      <ServiceSectionOne/>
+      <SectionThree serv/>
+      <ServiceSectionOne/>
+      <SectionThree serv/>
+
+    {/* <ServicePageSection /> */}
       
 
       <Footer />

@@ -18,7 +18,9 @@ import TestimonialSection from "../../components/Testimonial/Testimonial";
 import ClientsSection from "../../components/Client/Client";
 import NewsSection from "../../components/News/News";
 import Footer from "../../components/Footer/Footer";
-
+import SectionOne from "../../components/Home/SectionOne";
+import SectionTwo from "../../components/Home/section2/SectionTwo";
+import SectionThree from "../../components/Home/section3/SectionThree"
 const Home = () => {
   return (
     <div className="page-wrapper">
@@ -26,10 +28,18 @@ const Home = () => {
       <Header />
       <MobileMenu />
       <BannerSection />
-      <FeatureSection />
+
+      <SectionOne/>
+      <SectionTwo/>
+      <SectionThree/>
+
+
+      {/* <FeatureSection />
       <Quote />
       <AboutSection />
-      <ServiceSection />
+
+
+      <ServiceSection /> */}
       <AgencySection />
       <FunfactSection />
       <ProjectSection />

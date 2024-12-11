@@ -1,0 +1,123 @@
+.section-container {
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    gap: 20px;
+    padding: 80px 20px;
+  }
+  .content {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .header {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 7rem;
+  }
+  
+  .horizontal-line-serv {
+    margin-left: 7rem;
+    width: 100px;
+    height: 4px;
+    /* background-color: #6d6a75; */
+    background-color:#8678b8;;
+    /* background-color: #362f44 !important; */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    /* padding-left: 5rem; */
+  }
+  
+  .header-line {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* color: #6d6a75; */
+    color: #8678b8;
+    text-transform: uppercase;
+    /* border-left: 2px solid #6d6a75; */
+    padding-left: 8px;
+    margin-left: 60px; /* Space for horizontal line */
+  }
+  
+  .text-content-home {
+    /* max-width: 600px; */
+    width: 50% !important;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4e4c5b;
+    text-align: left;
+  }
+  
+  .section-description {
+    font-size: 16px;
+    color: #6d6a75;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  .image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    /* .section-container {
+      flex-direction: row;
+      text-align: left;
+    } */
+  
+    /* .text-content-home {
+      flex: 1;
+    } */
+  
+    /* .image-content {
+      flex: 1;
+      text-align: right;
+    } */
+    .header {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 1rem;
+      }
+      
+      .horizontal-line {
+        margin-left: 1rem;
+      
+        /* padding-left: 5rem; */
+      }
+    .section-description {
+      
+        text-align: center;
+      }
+     .content{
+        flex-direction: column;
+     }
+     .text-content-home {
+        /* max-width: 600px; */
+        width: 100% !important;
+      }
+  }
+  
