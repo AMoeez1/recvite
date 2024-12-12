@@ -1,0 +1,80 @@
+/* CapSecThree.css */
+
+.cap-sec-three {
+    position: relative;
+    /* background-image: url('https://via.placeholder.com/1200x600?text=Background+Image'); */
+    background-image: url('https://via.placeholder.com/1200x600');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+  }
+  
+  .cap-sec-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.6);  */
+    z-index: 1;
+  }
+  
+  .cap-sec-three .content-cap {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+  
+  .cap-sec-three h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 20px;
+  }
+  
+  .cap-sec-three p {
+    font-size: 16px;
+    margin: 0 0 20px;
+    line-height: 1.5;
+  }
+  
+  .cap-sec-three .contact-btn {
+    background-color: #8678b8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .cap-sec-three .contact-btn:hover {
+    transform: scale(1.1); /* Zoom effect */
+    background-color: #6f60a2; /* Slightly darker shade on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cap-sec-three {
+      height: auto;
+      padding: 40px 20px;
+    }
+  
+    .cap-sec-three h1 {
+      font-size: 24px;
+    }
+  
+    .cap-sec-three p {
+      font-size: 14px;
+    }
+  }
+  

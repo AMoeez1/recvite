@@ -5,7 +5,8 @@ import AgencySection from "../../components/Agency/Agency";
 import Footer from "../../components/Footer/Footer";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import CapabilitiesSection from "../../components/CapabilitiesSection/CapabilitiesSection";
-
+import CapSecOne from "../../components/CapabilitiesSection/section1/CapSecOne";
+import CapSecThree from "../../components/CapabilitiesSection/section3/CapSecThree";
 const Capabilities = () => {
   return (
     <div className="page-wrapper">
@@ -13,7 +14,9 @@ const Capabilities = () => {
       <Header />
       <MobileMenu />
       <PageTitle title={"Capabilities"} />
+      <CapSecOne/>
       <CapabilitiesSection />
+      <CapSecThree />
       <AgencySection />
       <Footer />
 

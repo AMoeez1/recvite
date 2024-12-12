@@ -3,11 +3,11 @@ import "./CapabilitiesSection.css";
 const CapabilitiesSection = () => {
   return (
     <div className="recruitment-container">
-      <h2 className="rec_heading">Recruitment Process Outsourcing</h2>
+      {/* <h2 className="rec_heading">Recruitment Process Outsourcing</h2>
       <hr className="divider" />
       <div className="sourcing-section">
         <div className="logos">
-          {/* Replace `src` attribute with actual logo URLs when available */}
+        
           <div className="logo-item">
             <img
               src="https://via.placeholder.com/200x150"
@@ -38,7 +38,7 @@ const CapabilitiesSection = () => {
             out in making the hiring process run smoothly.
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className="sourcing-section">
         <div className="text-content">
@@ -56,7 +56,7 @@ const CapabilitiesSection = () => {
           </p>
         </div>
       </div>
-
+{/* 
       <div className="sourcing-section">
         <div className="text-content">
           <h2>Cost effectiveness</h2>
@@ -72,7 +72,7 @@ const CapabilitiesSection = () => {
         </div>
 
         <div className="">
-          {/* Replace `src` attribute with actual logo URLs when available */}
+         
           <div className="cost-effective-logo">
             <img
               src="https://via.placeholder.com/500x500"
@@ -80,9 +80,9 @@ const CapabilitiesSection = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="sourcing-section">
+      {/* <div className="sourcing-section">
         <div className="text-content">
           <h2>Development Platforms</h2>
           <p>
@@ -96,7 +96,7 @@ const CapabilitiesSection = () => {
         </div>
 
         <div className="logos">
-          {/* Replace `src` attribute with actual logo URLs when available */}
+          
           <div className="logo-item">
             <img
               src="https://via.placeholder.com/200x150"
@@ -116,7 +116,7 @@ const CapabilitiesSection = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

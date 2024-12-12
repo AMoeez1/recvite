@@ -1,0 +1,123 @@
+.job-list-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .job-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .job-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .job-details {
+    /* flex: 1; */
+    width: 80%;
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .job-list-title {
+    width: 5rem;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px;
+    text-align: center;
+  }
+  
+  .job-meta {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    color: #777;
+
+  }
+  
+  .employment-type {
+    width: 100%;
+    background-color: #d0c9e87d;
+    /* background-color: #eef4ff; */
+    color: #87719e;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+
+    color: #392a58 !important;
+    
+  }
+  
+  .job-location {
+    width: 100%;
+    /* display: flex;
+    align-items: center; */
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .job-salary {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    width: 15%;
+    font-size:18px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .apply-now-btn {
+    /* background-color: #007bff; */
+    background-color: #8678b8;
+    color: #fff;
+    padding: 5px 10px;
+   
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-now-btn:hover {
+    /* background-color: #0056b3; */
+    color: #fff !important;
+    background-color: #73689b;
+  }
+  
+  @media (max-width: 768px) {
+    .job-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .apply-now-btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
