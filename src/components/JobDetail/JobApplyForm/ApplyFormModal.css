@@ -16,7 +16,7 @@
     background: white;
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
+    width: 600px;
     max-width: 90%;
     max-height: 80vh; /* Set max height for scrollable content */
     overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
@@ -29,9 +29,11 @@
     right: 10px;
     background: transparent;
     border: none;
-    font-size: 16px;
+    font-size: 25px;
     cursor: pointer;
     font-weight: 700;
+    cursor: pointer;
+    /* padding:10px; */
   }
   
   .apply-form label {
@@ -57,10 +59,67 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
+    width: 20%;
   }
   
   .apply-form .submit-button:hover {
     background-color: #0056b3;
+  }
+  
+
+  .consent{
+    display: flex !important;
+    /* justify-content: center; */
+    align-items: center;
+    gap:0.5rem;
+    
+  }
+
+  .checkbox{
+    width:1.5rem !important;
+    height: 2.5rem !important;
+    margin-top: 0px !important;
+    padding: 0px !important;
+    align-self: start;
+  }
+
+
+  .file-upload-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* color: #333; */
+  }
+  
+  .file-upload-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  .file-upload-input::-webkit-file-upload-button {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .file-upload-input::-webkit-file-upload-button:hover {
+    background-color: #d5d5d5;
+  }
+  
+  .file-upload-input:focus {
+    outline: 2px solid #4caf50;
+    border-color: #4caf50;
   }
   

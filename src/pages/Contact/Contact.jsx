@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import ContactInfoSection from "../../components/Contact/Contact-into/ContactInfo";
 import ContactSection from "../../components/Contact/Contact-section/ContactSection";
 import GoogleMap from "../../components/Contact/Goggle-map/GoogleMap";
-
+import NewsLetter from "../../components/NewsLetter/NewsLetter";
 
 const Contact = () => {
   return (
@@ -18,7 +18,9 @@ const Contact = () => {
       <PageTitle title={"Contact Us"} text={"Contact"} />
       <ContactInfoSection />
       <ContactSection />
+      
       <GoogleMap />
+      <NewsLetter/>
       <Footer />
 
       <button class="scroll-top scroll-to-target" data-target="html">

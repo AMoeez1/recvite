@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import './Footer.css'
 const Footer = () => {
   return (
     <footer className="main-footer">
@@ -16,7 +16,9 @@ const Footer = () => {
               icon="flaticon-mail"
               title="Email"
               content={
-                <Link to="mailto:needhelp@example.com">needhelp@example.com</Link>
+                <Link to="mailto:needhelp@example.com">
+                  needhelp@example.com
+                </Link>
               }
             />
             <FooterInfoItem
@@ -35,20 +37,20 @@ const Footer = () => {
               <div className="col-lg-4 col-md-6 col-sm-12 footer-column">
                 <LogoWidget />
               </div>
-              <div className="col-lg-2 col-md-6 col-sm-12 footer-column">
+              <div className="col-lg-4 col-md-6 col-sm-12 footer-column">
                 <LinksWidget
                   title="Explore"
                   links={[
                     { label: "About", path: "/about" },
                     { label: "Our Solutions", path: "/service" },
-                    { label: "Team Members", path: "/" },
+                    // { label: "Team Members", path: "/" },
                     { label: "News & Articles", path: "/blog" },
                     { label: "Contact Us", path: "/contact" },
                     { label: "FAQs", path: "/faq" },
                   ]}
                 />
               </div>
-              <div className="col-lg-2 col-md-6 col-sm-12 footer-column">
+              <div className="col-lg-4 col-md-6 col-sm-12 footer-column">
                 <LinksWidget
                   title="Links"
                   links={[
@@ -61,9 +63,9 @@ const Footer = () => {
                   className="ml-30"
                 />
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12 footer-column">
+              {/* <div className="col-lg-4 col-md-6 col-sm-12 footer-column">
                 <NewsWidget />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -113,8 +115,12 @@ const LogoWidget = () => (
         <img src="assets/images/footer-logo.png" alt="" />
       </Link>
     </figure>
-    <p>Join our newsletter and get latest updates</p>
-    <form action="contact.html" method="post">
+    <p className="footer-para">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi corrupti
+      eveniet ipsam velit officia dolorum repudiandae labore provident? Autem,
+      consequuntur ipsum. Recusandae molestiae cumque tenetur.
+    </p>
+    {/* <form action="contact.html" method="post">
       <div className="form-group">
         <input
           type="email"
@@ -126,7 +132,7 @@ const LogoWidget = () => (
           <i className="fas fa-check"></i>
         </button>
       </div>
-    </form>
+    </form> */}
     <ul className="social-links clearfix">
       <li>
         <h6>Connect:</h6>
@@ -163,7 +169,7 @@ const LinksWidget = ({ title, links, className = "" }) => (
     <div className="widget-content">
       <ul className="links-list clearfix">
         {links.map((link, index) => (
-          <li key={index}>
+          <li key={index} className="footer-item">
             <Link to={link.path}>{link.label}</Link>
           </li>
         ))}

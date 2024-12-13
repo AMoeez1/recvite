@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer'
 import FAQSection from '../../components/FAQ/FAQSection'
 import MobileMenu from '../../components/MobileMenu/MobileMenu'
 import JobsTable from '../../components/Jobs/JobsTable'
+import NewsLetter from '../../components/NewsLetter/NewsLetter'
 const Jobs = () => {
   return (
     <div className="page-wrapper">
@@ -17,6 +18,7 @@ const Jobs = () => {
     
 
     <AgencySection />
+    <NewsLetter/>
     <Footer />
 
     <button class="scroll-top scroll-to-target" data-target="html">

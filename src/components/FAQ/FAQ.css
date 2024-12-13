@@ -7,9 +7,13 @@
   padding-bottom: 5rem;
 
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   justify-items: center;
+}
+
+.faq-total-content{
+  width: 60%;
 }
 
 .faq-item {
@@ -49,6 +53,16 @@
   list-style-type: disc;
 }
 
+.faq-heading-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-close {
+  cursor: pointer;
+  font-size: 22px !important;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -80,6 +94,9 @@
 
 /* For small screens (mobile devices) */
 @media (max-width: 768px) {
+  .faq-total-content{
+    width: 100%;
+  }
   .faq {
     padding-left: 1.5rem;
     padding-right: 1.5rem;

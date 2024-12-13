@@ -21,6 +21,7 @@ import Footer from "../../components/Footer/Footer";
 import SectionOne from "../../components/Home/SectionOne";
 import SectionTwo from "../../components/Home/section2/SectionTwo";
 import SectionThree from "../../components/Home/section3/SectionThree"
+import NewsLetter from "../../components/NewsLetter/NewsLetter";
 const Home = () => {
   return (
     <div className="page-wrapper">
@@ -49,6 +50,7 @@ const Home = () => {
       <TestimonialSection />
       <ClientsSection />
       <NewsSection />
+      <NewsLetter/>
       <Footer />
 
       <button class="scroll-top scroll-to-target" data-target="html">

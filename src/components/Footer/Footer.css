@@ -1,0 +1,19 @@
+.footer-para{
+    color: #a7a7a7 !important;
+}
+
+.footer-widget{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget-title{
+    width: 100%;
+    text-align: center;
+}
+
+.footer-item{
+    text-align: center !important;
+}
