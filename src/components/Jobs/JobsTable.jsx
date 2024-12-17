@@ -1,45 +1,40 @@
 import React, { useState, useEffect } from "react";
 import "./JobsTable.css";
-import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import JobsList from "./jobList/JobsList";
 
-const JobTable = () => {
+const JobTable = ({ city, search }) => {
   const [Apijobs, setApiJobs] = useState([]);
-  const [industries, setIndustries] = useState([]); // Store unique industries
-  const [locations, setLocations] = useState([]); // Store unique locations
+  const [industries, setIndustries] = useState([]);
+  const [locations, setLocations] = useState([]);
   const [filters, setFilters] = useState({
     industry: "",
     type: "",
-    location: "",
-    search: "",
+    location: city || "", 
+    search: search || "", 
   });
 
   useEffect(() => {
-    // Fetch jobs from the API
     const fetchJobs = async () => {
       try {
-        const response = await fetch(
-          "https://test.hi5-consulting.com/api/all-jobs"
-        );
+        const response = await fetch("https://test.hi5-consulting.com/api/all-jobs");
         const data = await response.json();
         setApiJobs(data.data);
+        console.log("data is: " + Apijobs);
 
         // Extract unique industries
-        const uniqueIndustries = [
-          ...new Set(data.data.map((job) => job.job_industry)),
-        ];
+        const uniqueIndustries = [...new Set(data.data.map((job) => job.job_industry))];
         setIndustries(uniqueIndustries);
 
         // Extract unique locations
-        const uniqueLocations = [
-          ...new Set(data.data.map((job) => job.job_location)),
-        ];
-        setLocations(uniqueLocations); // Set locations in state
+        const uniqueLocations = [...new Set(data.data.map((job) => job.job_location))];
+        setLocations(uniqueLocations); 
       } catch (error) {
         console.error("Error fetching jobs:", error);
       }
     };
+
+    console.log(Apijobs)
 
     fetchJobs();
   }, []);
@@ -47,18 +42,7 @@ const JobTable = () => {
   const handleFilterChange = (filterKey, value) => {
     setFilters((prev) => ({
       ...prev,
-      [filterKey]:
-        value ===
-        `All Job ${filterKey.charAt(0).toUpperCase() + filterKey.slice(1)}`
-          ? ""
-          : value,
-    }));
-  };
-
-  const handleSearchChange = (e) => {
-    setFilters((prev) => ({
-      ...prev,
-      search: e.target.value,
+      [filterKey]: value === "" ? "" : value,
     }));
   };
 
@@ -76,13 +60,14 @@ const JobTable = () => {
     <div className="job-table-container">
       <h2>Jobs</h2>
       <div className="filters">
+        {/* Search Input */}
         <div className="search-input-container">
           <input
             type="text"
             placeholder="Search"
             className="search-input-table"
             value={filters.search}
-            onChange={handleSearchChange}
+            onChange={(e) => handleFilterChange("search", e.target.value)}
           />
           <FaSearch className="search-icon" />
         </div>
@@ -92,10 +77,7 @@ const JobTable = () => {
           <div
             className="table-dropdown-header"
             onClick={() =>
-              handleFilterChange(
-                "industry",
-                filters.industry ? "" : "All Job Industry"
-              )
+              handleFilterChange("industry", filters.industry ? "" : "All Job Industry")
             }
           >
             {filters.industry || "All Job Industry"}
@@ -144,10 +126,7 @@ const JobTable = () => {
           <div
             className="table-dropdown-header"
             onClick={() =>
-              handleFilterChange(
-                "location",
-                filters.location ? "" : "All Job Location"
-              )
+              handleFilterChange("location", filters.location ? "" : "All Job Location")
             }
           >
             {filters.location || "All Job Location"}
@@ -167,7 +146,7 @@ const JobTable = () => {
       </div>
 
       <table className="job-table">
-        <JobsList filteredJobs={filteredJobs}></JobsList>
+        <JobsList filteredJobs={filteredJobs} />
       </table>
     </div>
   );
