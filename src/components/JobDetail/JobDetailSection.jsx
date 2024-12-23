@@ -4,7 +4,13 @@ import ApplyFormModal from "./JobApplyForm/ApplyFormModal";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineWork } from "react-icons/md";
 import { BsCash } from "react-icons/bs";
-const JobDetailSection = () => {
+const JobDetailSection = ({
+  title,
+  description,
+  employment_type,
+  industry,
+  job_id,
+}) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleOpenModal = () => setModalOpen(true);
@@ -14,13 +20,13 @@ const JobDetailSection = () => {
     <div className="job-detail-section">
       <div className="main-content-job">
         <div className="job-apply">
-          <div className="employment-type-job">Full-Time</div>
+          <div className="employment-type-job">{employment_type}</div>
           <button className="apply-button" onClick={handleOpenModal}>
             Apply Now
           </button>
         </div>
 
-        <h1 className="job-title">IT Support Associate</h1>
+        <h1 className="job-title">{title}</h1>
 
         <div className="job-data-details">
           <div className="job-detail-location">
@@ -49,7 +55,7 @@ const JobDetailSection = () => {
             >
               <MdOutlineWork />
             </div>
-            <p>Construction</p>
+            <p>{industry}</p>
           </div>
 
           <div className="job-detail-salary">
@@ -63,9 +69,7 @@ const JobDetailSection = () => {
             >
               <BsCash />
             </div>
-            <p>
-               $20k - $25k
-            </p>
+            <p>$20k - $25k</p>
           </div>
         </div>
 
@@ -73,17 +77,18 @@ const JobDetailSection = () => {
 
         <div className="job-summary">
           <h2>Job Description</h2>
-          <p>
+          <p>{description}</p>
+          {/* <p>
             Sodales adipiscing semper litora cras ut vulputate eu viverra erat
             volutpat...
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             Sodales adipiscing semper litora cras ut vulputate eu viverra erat
             volutpat...
-          </p>
+          </p> */}
         </div>
 
-        <div className="job-responsibilities">
+        {/* <div className="job-responsibilities">
           <h2>Duties & Responsibilities</h2>
           <ul>
             <li>Arcu ac penatibus class ad et inceptos</li>
@@ -92,9 +97,9 @@ const JobDetailSection = () => {
             <li>Porta blandit aenean a amet</li>
             <li>Congue bibendum a suspendisse massa</li>
           </ul>
-        </div>
+        </div> */}
 
-        <div className="job-responsibilities">
+        {/* <div className="job-responsibilities">
           <h2>Minimum Qualifications</h2>
           <ul>
             <li>Arcu ac penatibus class ad et inceptos</li>
@@ -103,9 +108,14 @@ const JobDetailSection = () => {
             <li>Porta blandit aenean a amet</li>
             <li>Congue bibendum a suspendisse massa</li>
           </ul>
-        </div>
+        </div> */}
 
-        <ApplyFormModal isOpen={isModalOpen} onClose={handleCloseModal} />
+        <ApplyFormModal
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          jobTitle={title}
+          jobId={job_id}
+        />
       </div>
     </div>
   );

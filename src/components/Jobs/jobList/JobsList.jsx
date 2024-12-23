@@ -42,6 +42,9 @@ const JobsList = ({ filteredJobs }) => {
             state={{
               title: job.job_title,
               description: job.long_description,
+              employment_type: job.employment_type,
+              industry: job.job_industry,
+              job_id: job.id,
             }}
             className="apply-now-btn "
           >
