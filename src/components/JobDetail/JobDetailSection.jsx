@@ -114,7 +114,7 @@ const JobDetailSection = ({
           isOpen={isModalOpen}
           onClose={handleCloseModal}
           jobTitle={title}
-          jobId={job_id}
+          jobID={job_id}
         />
       </div>
     </div>

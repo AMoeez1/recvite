@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import "./ApplyFormModal.css";
 import { IoCloseSharp } from "react-icons/io5";
 
-const ApplyFormModal = ({ isOpen, onClose, jobTitle, jobId }) => {
+const ApplyFormModal = ({ isOpen, onClose, jobTitle, jobID }) => {
   const [formData, setFormData] = useState({
-    fullName: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
-    location: "",
+    country: "",
+    city: "",
     coverLetter: "",
     resume: null,
     consent: false,
@@ -27,29 +29,21 @@ const ApplyFormModal = ({ isOpen, onClose, jobTitle, jobId }) => {
     e.preventDefault();
     console.log("Form submission started");
 
-    if (!jobId) {
-      alert("Error: Job ID is missing");
-      return;
-    }
-
     try {
       const formDataToSend = new FormData();
-      formDataToSend.append("date", new Date().toISOString());
-      formDataToSend.append("jobTitle", jobTitle);
-      formDataToSend.append("jobId", jobId);
 
-      const userDetails = {
-        fullName: formData.fullName,
-        email: formData.email,
-        phone: formData.phone,
-        location: formData.location,
-        coverLetter: formData.coverLetter,
-      };
+      // Format date as YYYY-MM-DD
+      const currentDate = new Date();
+      const formattedDate = currentDate.toISOString().split("T")[0];
+      formDataToSend.append("date", formattedDate);
 
-      console.log("User Details:", userDetails);
-      console.log("Job ID:", jobId);
-
-      formDataToSend.append("userDetails", JSON.stringify(userDetails));
+      // Add all required fields
+      formDataToSend.append("first_name", formData.firstName);
+      formDataToSend.append("last_name", formData.lastName);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("phone", formData.phone);
+      formDataToSend.append("country", formData.country);
+      formDataToSend.append("city", formData.city);
 
       if (formData.resume) {
         formDataToSend.append("document", formData.resume);
@@ -58,15 +52,18 @@ const ApplyFormModal = ({ isOpen, onClose, jobTitle, jobId }) => {
         return;
       }
 
+      // Log the exact data being sent
+      console.log("Form Data Contents:");
+      for (let pair of formDataToSend.entries()) {
+        console.log(pair[0] + ": ", pair[1]);
+      }
+
       console.log("Sending request to API...");
       const response = await fetch(
-        "https://test.hi5-consulting.com/api/apply-job",
+        "https://test.hi5-consulting.com/api/contact-us",
         {
           method: "POST",
           body: formDataToSend,
-          headers: {
-            Accept: "application/json",
-          },
         }
       );
 
@@ -78,8 +75,11 @@ const ApplyFormModal = ({ isOpen, onClose, jobTitle, jobId }) => {
         alert("Application submitted successfully!");
         onClose();
       } else {
+        console.error("API Error Response:", responseData);
         const errorMessage =
-          responseData?.message || "Failed to submit application";
+          responseData?.message ||
+          responseData?.error ||
+          "Failed to submit application";
         throw new Error(errorMessage);
       }
     } catch (error) {
@@ -99,13 +99,24 @@ const ApplyFormModal = ({ isOpen, onClose, jobTitle, jobId }) => {
         <h2>Apply for this Position</h2>
         <form className="apply-form" onSubmit={handleSubmit}>
           <label>
-            Full Name
+            First Name
             <input
               type="text"
-              name="fullName"
-              placeholder="Your Name"
+              name="firstName"
+              placeholder="Your First Name"
               required
-              value={formData.fullName}
+              value={formData.firstName}
+              onChange={handleInputChange}
+            />
+          </label>
+          <label>
+            Last Name
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Your Last Name"
+              required
+              value={formData.lastName}
               onChange={handleInputChange}
             />
           </label>
@@ -132,13 +143,24 @@ const ApplyFormModal = ({ isOpen, onClose, jobTitle, jobId }) => {
             />
           </label>
           <label>
-            Location
+            Country
             <input
               type="text"
-              name="location"
-              placeholder="Your Location"
+              name="country"
+              placeholder="Your Country"
               required
-              value={formData.location}
+              value={formData.country}
+              onChange={handleInputChange}
+            />
+          </label>
+          <label>
+            City
+            <input
+              type="text"
+              name="city"
+              placeholder="Your City"
+              required
+              value={formData.city}
               onChange={handleInputChange}
             />
           </label>

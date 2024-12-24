@@ -1,92 +1,173 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// const ContactSection = () => {
-//     return (
-//         <section className="contact-section sec-pad">
-//             <div className="auto-container">
-//                 <div className="row clearfix">
-//                     <div className="col-lg-4 col-md-12 col-sm-12 title-column">
-//                         <div className="title-inner">
-//                             <div className="sec-title">
-//                                 <p>Contact with Us</p>
-//                                 <h2>Call Now or Write a Message</h2>
-//                             </div>
-//                             <div className="text">
-//                                 <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit sed do eiusm od tempor ut labore. sit amet scelerisque eros. Phasellus hendrerit neque a augue.</p>
-//                             </div>
-//                             <ul className="social-links clearfix">
-//                                 <li><h6>Connect:</h6></li>
-//                                 <li><Link to="/contact"><i className="fab fa-twitter"></i></Link></li>
-//                                 <li><Link to="/contact"><i className="fab fa-facebook-square"></i></Link></li>
-//                                 <li><Link to="/contact"><i className="fab fa-pinterest-p"></i></Link></li>
-//                                 <li><Link to="/contact"><i className="fab fa-instagram"></i></Link></li>
-//                             </ul>
-//                         </div>
-//                     </div>
-//                     <div className="col-lg-8 col-md-12 col-sm-12 form-column">
-//                         <div className="form-inner">
-//                             <form method="post" action="sendemail.php" id="contact-form" className="default-form">
-//                                 <div className="row clearfix">
-//                                     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-//                                         <input type="text" name="username" placeholder="Full Name" required />
-//                                     </div>
-//                                     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-//                                         <input type="email" name="email" placeholder="Email Address" required />
-//                                     </div>
-//                                     <div className="col-lg-6 col-md-12 col-sm-12 form-group">
-//                                         <input type="text" name="phone" required placeholder="Phone Number" />
-//                                     </div>
-//                                     <div className="col-lg-6 col-md-12 col-sm-12 form-group">
-//                                         <input type="text" name="subject" required placeholder="Subject" />
-//                                     </div>
-//                                     <div className="col-lg-12 col-md-12 col-sm-12 form-group">
-//                                         <textarea name="message" placeholder="Write Message"></textarea>
-//                                     </div>
-//                                     <div className="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-//                                         <button className="theme-btn-one" type="submit" name="submit-form">Submit Comment</button>
-//                                     </div>
-//                                 </div>
-//                             </form>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default ContactSection;
-
-// ContactSection.js
-import React from "react";
+import React, { useState } from "react";
 import "./ContactSection.css";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    country: "",
+    city: "",
+    date: new Date().toISOString().split("T")[0],
+    message: "",
+    services: [],
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleServiceChange = (e) => {
+    const { checked, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      services: checked
+        ? [...prev.services, value]
+        : prev.services.filter((service) => service !== value),
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const requestData = {
+        ...formData,
+        date: new Date().toISOString().split("T")[0],
+      };
+
+      console.log("Sending contact form data:", requestData);
+
+      const response = await fetch(
+        "https://test.hi5-consulting.com/api/contact-us",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestData),
+        }
+      );
+
+      if (response.ok) {
+        console.log("Contact form submission successful!");
+        alert("Message sent successfully!");
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          country: "",
+          city: "",
+          date: new Date().toISOString().split("T")[0],
+          message: "",
+          services: [],
+        });
+      } else {
+        console.error("Contact form submission failed:", await response.text());
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
+
   return (
     <section className="contact-section">
-      {/* Left Side Illustration */}
       <div className="contact-illustration">
-        <img src="https://via.placeholder.com/400" alt="Contact Illustration" />
+        <img
+          src="https://via.placeholder.com/400x400"
+          alt="Contact Illustration"
+        />
       </div>
 
-      {/* Right Side Form */}
       <div className="contact-form-wrapper">
         <h2>Get in touch !</h2>
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-row">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Email" required />
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleInputChange}
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleInputChange}
+              placeholder="Last Name"
+              required
+            />
           </div>
-          <input type="tel" name="phone" placeholder="Contact" required />
-          {/* <input type="text" name="subject" placeholder="Subject" /> */}
+
+          <div className="form-row">
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Email"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              placeholder="Phone"
+              required
+            />
+          </div>
+
+          <div className="form-row">
+            <input
+              type="text"
+              name="country"
+              value={formData.country}
+              onChange={handleInputChange}
+              placeholder="Country"
+              required
+            />
+            <input
+              type="text"
+              name="city"
+              value={formData.city}
+              onChange={handleInputChange}
+              placeholder="City"
+              required
+            />
+          </div>
+
+          {/* <div className="form-row">
+            <input
+              type="date"
+              name="date"
+              value={formData.date}
+              onChange={handleInputChange}
+              required
+            />
+          </div> */}
 
           <div className="contact-form-msg">
-          <label htmlFor="">How can we assist?</label>
-          <textarea name="message" placeholder="Message" required></textarea>
+            <label>How can we assist?</label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              placeholder="Message"
+              required
+            ></textarea>
           </div>
-          
 
-          {/* Services Section */}
           <div className="services-section-contact">
             <h3>Services</h3>
             <div className="services-options-contact">
@@ -95,6 +176,10 @@ const ContactSection = () => {
                   type="checkbox"
                   name="services"
                   value="Permanent Recruitment (Direct Hire)"
+                  checked={formData.services.includes(
+                    "Permanent Recruitment (Direct Hire)"
+                  )}
+                  onChange={handleServiceChange}
                 />
                 Permanent Recruitment (Direct Hire)
               </label>
@@ -103,6 +188,10 @@ const ContactSection = () => {
                   type="checkbox"
                   name="services"
                   value="Temporary/Contract Staffing"
+                  checked={formData.services.includes(
+                    "Temporary/Contract Staffing"
+                  )}
+                  onChange={handleServiceChange}
                 />
                 Temporary/Contract Staffing
               </label>
@@ -111,6 +200,10 @@ const ContactSection = () => {
                   type="checkbox"
                   name="services"
                   value="Executive Search (Headhunting)"
+                  checked={formData.services.includes(
+                    "Executive Search (Headhunting)"
+                  )}
+                  onChange={handleServiceChange}
                 />
                 Executive Search (Headhunting)
               </label>
@@ -119,13 +212,19 @@ const ContactSection = () => {
                   type="checkbox"
                   name="services"
                   value="Talent Mapping and Market Research"
+                  checked={formData.services.includes(
+                    "Talent Mapping and Market Research"
+                  )}
+                  onChange={handleServiceChange}
                 />
                 Talent Mapping and Market Research
               </label>
             </div>
           </div>
 
-          <button type="submit" className="theme-btn-one">SEND MESSAGE</button>
+          <button type="submit" className="theme-btn-one">
+            SEND MESSAGE
+          </button>
         </form>
       </div>
     </section>
