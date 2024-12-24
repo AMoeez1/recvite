@@ -34,10 +34,10 @@ const JobTable = ({ city, search }) => {
       }
     };
 
-    console.log(Apijobs)
+    // console.log(Apijobs)
 
     fetchJobs();
-  }, []);
+  }, [Apijobs]);
 
   const handleFilterChange = (filterKey, value) => {
     setFilters((prev) => ({
