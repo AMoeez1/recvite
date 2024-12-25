@@ -110,11 +110,26 @@ const FooterInfoItem = ({ icon, title, content }) => (
 
 const LogoWidget = () => (
   <div className="footer-widget logo-widget">
-    <figure className="footer-logo">
+
+  <div className="logo-box">
+  <figure className="footer-logo">
       <Link to="/">
-        <img src="assets/images/footer-logo.png" alt="" />
+        <img src="assets/images/logo/logo.png" alt="" />
       </Link>
+      
     </figure>
+    <div className="logo-heading">
+            <h1>
+              HI5 Consulting
+            </h1>
+            <p>
+              Recruitment and Development
+            </p>
+
+            </div>
+
+  </div>
+  
     <p className="footer-para">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi corrupti
       eveniet ipsam velit officia dolorum repudiandae labore provident? Autem,

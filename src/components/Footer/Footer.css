@@ -17,3 +17,31 @@
 .footer-item{
     text-align: center !important;
 }
+
+.logo-box{
+    align-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.logo-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-heading h1{
+    color: #fff !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: .2 !important;
+    margin-top: 1.2rem !important;
+}
+
+.logo-heading p{
+    color: #6e57c9 !important;
+    font-family: "Roboto", sans-serif !important;
+}
