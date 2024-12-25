@@ -67,14 +67,14 @@ const Header = () => {
       </div>
       <div className="header-lower">
         <div className="outer-box">
-          <div className="logo-box">
+          <div className="logo-box-header">
             <figure className="logo">
               <Link to="/">
                 <img src="assets/images/logo/logo.png" alt="" />
               </Link>
             </figure>
 
-            <div className="logo-heading">
+            <div className="logo-heading-header">
             <h1>
               HI5 Consulting
             </h1>

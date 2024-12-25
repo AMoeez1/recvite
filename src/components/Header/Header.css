@@ -1,17 +1,17 @@
-.logo-box{
+.logo-box-header{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
 
-.logo-heading{
+.logo-heading-header{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.logo-heading h1{
+.logo-heading-header h1{
     color: #fff !important;
     font-size: 18px !important;
     font-weight: 600 !important;
@@ -19,7 +19,7 @@
     margin-top: 2.7rem !important;
 }
 
-.logo-heading p{
+.logo-heading-header p{
     color: #6e57c9 !important;
     font-family: "Roboto", sans-serif !important;
 }
