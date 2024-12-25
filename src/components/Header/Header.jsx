@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import './Header.css'
 const Header = () => {
   return (
     <header className="main-header style-one">
@@ -70,9 +70,19 @@ const Header = () => {
           <div className="logo-box">
             <figure className="logo">
               <Link to="/">
-                <img src="assets/images/logo.png" alt="" />
+                <img src="assets/images/logo/logo.png" alt="" />
               </Link>
             </figure>
+
+            <div className="logo-heading">
+            <h1>
+              HI5 Consulting
+            </h1>
+            <p>
+              Recruitment and Development
+            </p>
+
+            </div>
           </div>
           <div className="menu-area">
             <div className="mobile-nav-toggler">

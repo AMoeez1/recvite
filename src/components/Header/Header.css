@@ -1,0 +1,25 @@
+.logo-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-heading h1{
+    color: #fff !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: .2 !important;
+    margin-top: 2.7rem !important;
+}
+
+.logo-heading p{
+    color: #6e57c9 !important;
+    font-family: "Roboto", sans-serif !important;
+}
