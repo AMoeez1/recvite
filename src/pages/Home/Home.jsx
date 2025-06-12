@@ -27,7 +27,7 @@ const Home = () => {
     <div className="page-wrapper">
       {/* <div class="preloader"></div> */}
       <Header />
-      <MobileMenu />
+      {/* <MobileMenu /> */}
       <BannerSection />
 
       <SectionOne/>

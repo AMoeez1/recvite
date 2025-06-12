@@ -79,88 +79,74 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="contact-section">
-      <div className="contact-illustration">
+    // <section className="contact-section">
+    <section className="py-5 d-flex justify-content-center">
+      {/* <div className="contact-illustration">
         <img
           src="https://via.placeholder.com/400x400"
           alt="Contact Illustration"
         />
-      </div>
+      </div> */}
 
-      <div className="contact-form-wrapper">
-        <h2>Get in touch !</h2>
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-row">
+      <div
+        className="card p-5 shadow-xl contact-form-wrapper"
+        style={{
+          maxWidth: "500px",
+          width: "100%",
+          border: "none",
+          boxShadow: '10px',
+          background: "linear-gradient(to right, #EBEBEB, #ffffff)",
+        }}
+      >
+        <h2 className="fw-bold mb-2">Get in touch !</h2>
+
+        <form>
+          {/* Name */}
+          <div className="mb-3">
+            <label className="form-label">Name</label>
             <input
               type="text"
               name="firstName"
               value={formData.firstName}
+              className="form-control"
               onChange={handleInputChange}
               placeholder="First Name"
               required
             />
-            <input
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleInputChange}
-              placeholder="Last Name"
-              required
-            />
           </div>
 
-          <div className="form-row">
+          {/* Email */}
+          <div className="mb-3">
+            <label className="form-label">Email</label>
             <input
               type="email"
               name="email"
+              className="form-control"
               value={formData.email}
               onChange={handleInputChange}
               placeholder="Email"
               required
             />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Phone number</label>
             <input
               type="tel"
               name="phone"
               value={formData.phone}
+              className="form-control"
               onChange={handleInputChange}
               placeholder="Phone"
               required
             />
           </div>
 
-          <div className="form-row">
-            <input
-              type="text"
-              name="country"
-              value={formData.country}
-              onChange={handleInputChange}
-              placeholder="Country"
-              required
-            />
-            <input
-              type="text"
-              name="city"
-              value={formData.city}
-              onChange={handleInputChange}
-              placeholder="City"
-              required
-            />
-          </div>
-
-          {/* <div className="form-row">
-            <input
-              type="date"
-              name="date"
-              value={formData.date}
-              onChange={handleInputChange}
-              required
-            />
-          </div> */}
-
-          <div className="contact-form-msg">
-            <label>How can we assist?</label>
+          <div className="mb-3">
+            <label className="form-label">How can we help?</label>
             <textarea
               name="message"
+              className="form-control"
               value={formData.message}
               onChange={handleInputChange}
               placeholder="Message"
@@ -168,10 +154,12 @@ const ContactSection = () => {
             ></textarea>
           </div>
 
-          <div className="services-section-contact">
-            <h3>Services</h3>
-            <div className="services-options-contact">
-              <label>
+          {/* Services */}
+          <div className="mb-4">
+            <label className="form-label">Services</label>
+            <div className="row">
+              <div className="col-6">
+                <label>
                 <input
                   type="checkbox"
                   name="services"
@@ -195,7 +183,9 @@ const ContactSection = () => {
                 />
                 Temporary/Contract Staffing
               </label>
-              <label>
+              </div>
+              <div className="col-6">
+                              <label>
                 <input
                   type="checkbox"
                   name="services"
@@ -219,12 +209,20 @@ const ContactSection = () => {
                 />
                 Talent Mapping and Market Research
               </label>
+              </div>
             </div>
           </div>
 
-          <button type="submit" className="theme-btn-one">
-            SEND MESSAGE
-          </button>
+          {/* Submit Button */}
+          <div className="d-grid">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              style={{ backgroundColor: "#7f56d9" }}
+            >
+              Get started
+            </button>
+          </div>
         </form>
       </div>
     </section>
