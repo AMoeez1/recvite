@@ -13,6 +13,15 @@
     margin-bottom: 20px;
   }
   
+  /* styles.css */
+.smoky-text {
+  color: #f2f2f2 !important;  /* Use !important */
+}
+
+.duller-smoky-text {
+  color: #e0e0e0 !important;  /* Duller, lighter smoky white */
+}
+
   .newsletter-content h2 {
     margin: 0;
     font-size: 1.8rem;
@@ -36,9 +45,9 @@
   
   .newsletter-form input {
     flex: 1;
-    padding: 10px;
+    padding: 3px;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 5px 0 0 5px;
     outline: none;
   }
@@ -47,7 +56,7 @@
   
   
   .newsletter-form button {
-    padding: 10px 20px;
+    padding: 4px 20px;
     font-size: 1rem;
     color: #fff;
     background-color: #5a5afb;
@@ -85,3 +94,4 @@
       /* width: 100%; */
     }
   }
+  

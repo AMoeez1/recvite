@@ -27,6 +27,10 @@
     /* margin-bottom: 2rem; */
 }
 
+.copyright {
+    color: white !important;
+}
+
 .logo-heading{
     display: flex;
     flex-direction: column;

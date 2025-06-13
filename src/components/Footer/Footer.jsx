@@ -11,7 +11,7 @@ const Footer = () => {
         }}
       >
         <div className="auto-container">
-          <div className="footer-info clearfix">
+          {/* <div className="footer-info clearfix">
             <FooterInfoItem
               icon="flaticon-mail"
               title="Email"
@@ -31,8 +31,8 @@ const Footer = () => {
               title="Address"
               content="Suite 20 Golden Street USA"
             />
-          </div>
-          <div className="widget-section">
+          </div> */}
+          <div className="widget-section" style={{padding: '30px 10px'}}>
             <div className="row clearfix">
               <div className="col-lg-4 col-md-6 col-sm-12 footer-column">
                 <LogoWidget />
@@ -67,10 +67,15 @@ const Footer = () => {
                 <NewsWidget />
               </div> */}
             </div>
+            <div className="py-4" style={{borderTop: '1px solid #f2f2f2'}}>
+              <p className="copyright">
+                &copy; Copyright 2020 by <Link to="/">Recvite</Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
+      {/* <div className="footer-bottom">
         <div className="auto-container">
           <div className="inner-box clearfix">
             <div className="copyright pull-left">
@@ -91,7 +96,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 };

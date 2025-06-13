@@ -83,15 +83,16 @@ const SectionTwo = () => {
                 transform: `translateX(${-100 * currentIndex}%)`,
               }}
             >
-
-            <div className="heading-servces-sec2">
-            <h4>{card.title}</h4>
-            <div className="icon-services">{card.icon}</div>
-            
-            </div>
-             
-              <p>{card.description}</p>
-              <button className="read-more">Read more →</button>
+              <div className="heading-servces-sec2">
+                <div className="icon-services">{card.icon}</div>
+              </div>
+              <h4 style={{ fontWeight: "700" }}>{card.title}</h4>
+              <p style={{ color: "#717171 !important" }}>{card.description}</p>
+              <div className="">
+                <button className="read-more px-4 py-1 border rounded-pill bg-light">
+                  Read more →
+                </button>
+              </div>
             </div>
           ))}
         </div>
