@@ -160,9 +160,9 @@ const LogoWidget = () => (
       </div>
     </form> */}
     <ul className="social-links clearfix">
-      <li>
+      {/* <li>
         <h6>Connect:</h6>
-      </li>
+      </li> */}
       <li>
         <Link to="/">
           <i className="fab fa-twitter"></i>

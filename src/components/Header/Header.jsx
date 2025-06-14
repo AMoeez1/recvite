@@ -97,17 +97,17 @@ const Header = () => {
               >
                 <ul className="navigation clearfix">
                   <li className="current dropdown">
-                    <Link to="/">Home</Link>
+                    <Link style={{color: 'black'}} to="/">Home</Link>
                    
                   </li>
                   
                   <li className="dropdown">
-                    <Link to="/service">Services</Link>
+                    <Link style={{color: 'black'}} to="/service">Services</Link>
                     
                   </li>
 
                   <li className="dropdown">
-                    <Link to="/capabilities">Capabilities</Link>
+                    <Link style={{color: 'black'}} to="/capabilities">Capabilities</Link>
                     
                   </li>
 
@@ -115,13 +115,13 @@ const Header = () => {
                   
 
                   <li className="dropdown">
-                    <Link to="/">Industries</Link>
+                    <Link style={{color: 'black'}} to="/">Industries</Link>
                     <ul>
                       <li>
-                        <Link to="/recruiting">Recruiting</Link>
+                        <Link style={{color: 'black'}} to="/recruiting">Recruiting</Link>
                       </li>
                       {/* <li>
-                        <Link to="/development">Development</Link>
+                        <Link style={{color: 'black'}} to="/development">Development</Link>
                       </li> */}
                     </ul>
                   </li>
@@ -129,17 +129,17 @@ const Header = () => {
            
 
                   <li className="dropdown">
-                    <Link to="/jobs">Jobs</Link>
+                    <Link style={{color: 'black'}} to="/jobs">Jobs</Link>
 
                   </li>
 
 
                   {/* <li className="dropdown">
-                    <Link to="/blog">Blog</Link>
+                    <Link style={{color: 'black'}} to="/blog">Blog</Link>
                    
                   </li> */}
                   <li>
-                    <Link to="/contact">Contact Us</Link>
+                    <Link style={{color: 'black'}} to="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>
