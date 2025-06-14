@@ -13,7 +13,7 @@ const Capabilities = () => {
       {/* <div class="preloader"></div> */}
       <Header />
       <MobileMenu />
-      <PageTitle title={"Capabilities"} />
+      <PageTitle title={"Capabilities"} image={'url("/assets/images/web images/services/breadservice.jpg")'} />
       <CapSecOne/>
       <CapabilitiesSection />
       <CapSecThree />

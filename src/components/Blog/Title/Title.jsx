@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './title.css'
-const PageTitle = ({ text, title, desc, detail }) => {
+const PageTitle = ({ text, title, desc, detail, image }) => {
   return (
     // Page Title
     <section
       className="page-title centred"
       style={{
-        backgroundImage: 'url("/assets/images/web images/services/breadservice.jpg")',
+        backgroundImage: image,
         minHeight: '100vh',
       }}
     >
       <div className="auto-container">
         <div className="content-box">
-          <div className="title">
-            <h1 className="title" >{title}</h1>
+          <div className="title-service">
+            <h1 className="title-service" >{title}</h1>
           </div>
           {text && (
             <ul className="bread-crumb clearfix">

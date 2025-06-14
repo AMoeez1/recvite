@@ -21,6 +21,7 @@ const Service = () => {
         text={
           "Since the exceptionally starting of our commerce, we’ve been interfacing our clients with difficult discoverability within the Data Innovation space. Our recruitment consulting firm ability ranges over a wide cluster of subdomains counting Recruitment & Development"
         }
+        image={'url("/assets/images/web images/services/breadservice.jpg")'}
       />
 
       <SectionThree serv />

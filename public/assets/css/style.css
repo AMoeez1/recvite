@@ -82,6 +82,12 @@ body {
     padding: 0px 15px;
   }
 }
+/* Added by moeez */
+.title-service {
+    font-weight: bolder !important;
+    font-size: 80px !important;
+    color: white !important;
+}
 
 p {
   font-family: poppins, sans-serif !important;
