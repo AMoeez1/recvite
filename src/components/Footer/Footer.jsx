@@ -190,10 +190,10 @@ const LogoWidget = () => (
 const LinksWidget = ({ title, links, className = "" }) => (
   <div className={`footer-widget links-widget ${className}`}>
     <div className="widget-title">
-      <h4>{title}</h4>
     </div>
     <div className="widget-content">
       <ul className="links-list clearfix">
+      <h4 className="" style={{color: '#fff', fontWeight: 'bold'}}>{title}</h4>
         {links.map((link, index) => (
           <li key={index} className="footer-item">
             <Link to={link.path}>{link.label}</Link>

@@ -42,7 +42,7 @@ const styles = {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-6 text-center mb-4">
-            <h1 className="fw-bold mb-3">
+            <h1 className="fw-bold mb-3" style={{fontWeight: "bolder"}}>
               Join us & Explore <br /> Thousands of Jobs
             </h1>
             <p className="text-muted">Find Jobs, Employment & Career Opportunities</p>
@@ -104,15 +104,17 @@ const styles = {
 
 
       <ServiceSection /> */}
-      <AgencySection />
-      <FunfactSection />
-      <ProjectSection />
+
+      {/* This was removed by me */}
+      {/* <AgencySection /> */}
+      {/* <FunfactSection /> */}
+      {/* <ProjectSection /> */}
       <WorkingProcess />
-      <Cta />
-      <ProgressSection />
-      <TestimonialSection />
-      <ClientsSection />
-      <NewsSection />
+      {/* <Cta /> */}
+      {/* <ProgressSection /> */}
+      {/* <TestimonialSection /> */}
+      {/* <ClientsSection /> */}
+      {/* <NewsSection /> */}
       <NewsLetter/>
       <Footer />
 

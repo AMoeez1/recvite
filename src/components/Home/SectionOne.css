@@ -50,7 +50,7 @@
   }
   
   .image-placeholder {
-    width: 90%;
+    width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
     background-color: #e0e0e0;

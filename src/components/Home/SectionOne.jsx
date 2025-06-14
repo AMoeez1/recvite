@@ -13,7 +13,7 @@ const SectionOne = () => {
             <div className="image-container">
               {/* <img src="https://via.placeholder.com/600x400" alt="Business Example" className="image-placeholder" /> */}
               <img
-                src="/assets/images/web images/demo_image.webp"
+                src="/assets/images/web images/second_section.jpg"
                 alt="Business Example"
                 className="image-placeholder"
               />
