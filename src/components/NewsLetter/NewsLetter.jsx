@@ -36,8 +36,9 @@ function NewsLetter() {
       <div
         className="newsletter-section p-5"
         style={{
-          background:
-            "linear-gradient(135deg, #333333, #1a1a1a, #4d4d4d, #333333)",
+          // background:
+          //   "linear-gradient(135deg, #333333, #1a1a1a, #4d4d4d, #333333)",
+          background: "#343c3f",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

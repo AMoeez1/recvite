@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Footer.css'
+import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="main-footer">
@@ -11,7 +11,7 @@ const Footer = () => {
         }}
       >
         <div className="auto-container">
-          {/* <div className="footer-info clearfix">
+          <div className="footer-info clearfix">
             <FooterInfoItem
               icon="flaticon-mail"
               title="Email"
@@ -31,10 +31,10 @@ const Footer = () => {
               title="Address"
               content="Suite 20 Golden Street USA"
             />
-          </div> */}
-          <div className="widget-section" style={{padding: '30px 10px'}}>
+          </div>
+          <div className="widget-section" style={{ padding: "30px 10px" }}>
             <div className="row clearfix">
-              <div className="col-lg-4 col-md-6 col-sm-12 footer-column">
+              <div className="col-lg-4 col-md-6 col-sm-12 footer-column pb-4">
                 <LogoWidget />
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 footer-column">
@@ -67,10 +67,24 @@ const Footer = () => {
                 <NewsWidget />
               </div> */}
             </div>
-            <div className="py-4" style={{borderTop: '1px solid #f2f2f2'}}>
-              <p className="copyright">
-                &copy; Copyright 2020 by <Link to="/">Recvite</Link>
-              </p>
+            <div
+              className="pt-4 row"
+              style={{ borderTop: "1px solid #f2f2f2" }}
+            >
+              <div className="col-md-6">
+                <p className="copyright">
+                  &copy; Copyright 2020 by <Link to="/">Recvite</Link>
+                </p>
+              </div>
+              <div className="col-md-6">
+                <ul className="footer-nav pull-right">
+                  <li className="">
+                    <Link className="mx-2" to="/privacy-policy">Privacy Policy</Link>
+                    <Link className="mx-2" to="/terms">Terms & Conditions</Link>
+                    <Link className="mx-2" to="/site-map">Site Map</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -115,26 +129,18 @@ const FooterInfoItem = ({ icon, title, content }) => (
 
 const LogoWidget = () => (
   <div className="footer-widget logo-widget">
+    <div className="logo-box">
+      <figure className="footer-logo">
+        <Link to="/">
+          <img src="assets/images/logo/logo.png" alt="" />
+        </Link>
+      </figure>
+      <div className="logo-heading">
+        <h1>HI5 Consulting</h1>
+        <p>Recruitment and Development</p>
+      </div>
+    </div>
 
-  <div className="logo-box">
-  <figure className="footer-logo">
-      <Link to="/">
-        <img src="assets/images/logo/logo.png" alt="" />
-      </Link>
-      
-    </figure>
-    <div className="logo-heading">
-            <h1>
-              HI5 Consulting
-            </h1>
-            <p>
-              Recruitment and Development
-            </p>
-
-            </div>
-
-  </div>
-  
     <p className="footer-para">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi corrupti
       eveniet ipsam velit officia dolorum repudiandae labore provident? Autem,
