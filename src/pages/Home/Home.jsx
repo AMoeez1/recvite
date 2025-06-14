@@ -23,13 +23,76 @@ import SectionTwo from "../../components/Home/section2/SectionTwo";
 import SectionThree from "../../components/Home/section3/SectionThree"
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
 const Home = () => {
+const styles = {
+  height: '500px',
+  backgroundImage: 'url("/assets/images/web images/Home/Banner/Banner.jpg")',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  padding: '60px 0'
+};
+
   return (
     <div className="page-wrapper">
       {/* <div class="preloader"></div> */}
       <Header />
       {/* <MobileMenu /> */}
-      <BannerSection />
+      {/* <BannerSection /> */}
+    <div style={styles} className="job-banner d-flex align-items-center text-dark">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-md-6 text-center mb-4">
+            <h1 className="fw-bold mb-3">
+              Join us & Explore <br /> Thousands of Jobs
+            </h1>
+            <p className="text-muted">Find Jobs, Employment & Career Opportunities</p>
+          </div>
 
+          <div className="col-md-7">
+            <form
+              className="row justify-content-center mx-auto g-3 p-4"
+              style={{ background: '#fff', borderRadius: '15px', maxWidth: '1000px' }}
+            >
+              <div className="col-md-5">
+                <h6 className="text-start mb-1">What</h6>
+                <div className="input-group">
+                  <span className="input-group-text bg-white border-0">
+                    {/* <FaBriefcase /> */}
+                  </span>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Job title, keywords…"
+                    style={{ border: 'none', borderRadius: '10px' }}
+                  />
+                </div>
+              </div>
+
+              <div className="col-md-5">
+                <h6 className="text-start mb-1">Where</h6>
+                <div className="input-group">
+                  <span className="input-group-text bg-white border-0">
+                    {/* <FaSearchLocation /> */}
+                  </span>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="City or postcode"
+                    style={{ border: 'none', borderRadius: '10px' }}
+                  />
+                </div>
+              </div>
+
+              <div className="col-md-2 d-flex align-items-end">
+                <button type="submit" className="btn btn-primary">
+                  Find Jobs
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
       <SectionOne/>
       <SectionTwo/>
       <SectionThree/>
