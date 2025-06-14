@@ -81,6 +81,7 @@ const SectionTwo = () => {
               className={`card ${index === currentIndex ? "active" : "active"}`}
               style={{
                 transform: `translateX(${-100 * currentIndex}%)`,
+                background: "#f4f8fb",
               }}
             >
               <div className="heading-servces-sec2">

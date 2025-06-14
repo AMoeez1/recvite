@@ -11,8 +11,8 @@ const FAQ = () => {
     {/* <div class="preloader"></div> */}
     <Header />
     <MobileMenu />
-    <PageTitle title={"FAQ"} text={"FAQ"} />
-    <FAQSection />
+    <PageTitle title={"FAQ"} text={"FAQ"}/>
+    <FAQSection image={'url("/assets/images/web images/faq.jpg")'}/>
     <AgencySection />
     <Footer />
 

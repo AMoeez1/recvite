@@ -23,6 +23,7 @@ const JobDetail = () => {
   console.log("Description:", description);
   console.log("Job ID:", job_id);
 
+
   return (
     <div className="page-wrapper">
       {/* <div class="preloader"></div> */}

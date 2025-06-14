@@ -7,7 +7,7 @@ import FAQSection from "../../components/FAQ/FAQSection";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import JobsTable from "../../components/Jobs/JobsTable";
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Jobs = () => {
   const { state } = useLocation();
@@ -15,6 +15,7 @@ const Jobs = () => {
 
   const jobs = [
     {
+      id: 1,
       logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
       title: "Web Designer / Developer",
       type: "Full Time",
@@ -23,6 +24,7 @@ const Jobs = () => {
       salary: "$950 – $1100/mo",
     },
     {
+      id: 2,
       logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
       title: "Marketing Director",
       type: "Part Time",
@@ -31,6 +33,7 @@ const Jobs = () => {
       salary: "$950 – $1100/mo",
     },
     {
+      id: 3,
       logo: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg",
       title: "Application Developer",
       type: "Remote",
@@ -39,6 +42,7 @@ const Jobs = () => {
       salary: "$950 – $1100/mo",
     },
     {
+      id: 4,
       logo: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Lenovo_Global_Corporate_Logo.png",
       title: "Senior Product Designer",
       type: "WFH",
@@ -61,8 +65,15 @@ const Jobs = () => {
       <div className="container my-5">
         <div className="row g-4">
           {jobs.map((job, index) => (
-            <div key={index} className="col-12 py-2">
-              <div className="row shadow-sm border-0 rounded-4 bg-light p-3" style={{display: 'flex', alignItems: 'center'}}>
+            <Link
+              to={`/job-detail/${job.id}`}
+              key={index}
+              className="col-12 py-2"
+            >
+              <div
+                className="row shadow-sm border-0 rounded-4 bg-light p-3"
+                style={{ display: "flex", alignItems: "center" }}
+              >
                 <div className="col-md-1">
                   <img
                     src={job.logo}
@@ -95,7 +106,7 @@ const Jobs = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

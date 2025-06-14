@@ -35,12 +35,12 @@
 }
 
 .faq-content {
-  font-size: 18px;
-  color: #4a4a4a; /* Grayish color for the paragraph */
+  font-size: 17px !important;
+  color: #8b8b8b !important; /* Grayish color for the paragraph */
   margin: 10px 0;
   line-height: 1.6;
   animation: fadeIn 0.3s ease;
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
 }
 .faq ul {
   list-style-type: disc;
@@ -60,7 +60,7 @@
 
 .faq-close {
   cursor: pointer;
-  font-size: 22px !important;
+  font-size: 30px !important;
 }
 
 @keyframes fadeIn {
