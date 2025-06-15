@@ -12,42 +12,119 @@ const Agencies = () => {
       >
         Agencies we've placed candidates at
       </h3>
+
       <div className="container pb-5 pt-2">
-        <div className="row g-0" style={{ border: "1px solid #ccc" }}>
-          {[
-            "agen1.png",
-            "agen2.png",
-            "agen3.png",
-            "agen4.png",
-            "agen5.png",
-            "agen6.png",
-            "agen7.png",
-            "agen8.png",
-          ].map((img, index) => (
-            <div
-              key={index}
-              className="col-md-3 d-flex align-items-center justify-content-center"
-              style={{
-                border: "1px solid #ccc",
-                minHeight: "120px",
-                boxSizing: "border-box",
-                textAlign: "center",
-              }}
-            >
-              <img
-                src={`/assets/images/web images/Services/${img}`}
-                alt={`Agency ${index + 1}`}
-                style={{
-                  maxWidth: "100%",
-                  padding: "15px",
-                  objectFit: "contain",
-                }}
-              />
-            </div>
-          ))}
+        <div className="row g-4">
+          <div
+            className="col-md-3 box"
+            style={{
+              borderTop: "1px transparent",
+              borderBottom: "2px solid #fff",
+              borderRight: "2px solid #fff",
+              minHeight: "120px",
+              boxSizing: "border-box",
+              textAlign: "center",
+            }}
+          >
+            <img src="/assets/images/web images/Services/agen1.png" alt="" />
+          </div>
+          <div
+            className="col-md-3 box"
+            style={{
+              borderTop: "1px transparent",
+              borderBottom: "2px solid #fff",
+              borderRight: "2px solid #fff",
+              minHeight: "120px",
+              boxSizing: "border-box",
+              textAlign: "center",
+            }}
+          >
+            <img src="/assets/images/web images/Services/agen2.png" alt="" />
+          </div>
+          <div
+            className="col-md-3 box"
+            style={{
+              borderTop: "1px transparent",
+              borderBottom: "2px solid #fff",
+              borderRight: "2px solid #fff",
+              minHeight: "120px",
+              boxSizing: "border-box",
+              textAlign: "center",
+            }}
+          >
+            <img src="/assets/images/web images/Services/agen3.png" alt="" />
+          </div>
+          <div
+            className="col-md-3 box"
+            style={{
+              borderTop: "1px transparent",
+              borderBottom: "2px solid #fff",
+              borderRight: "2px transparent",
+              minHeight: "120px",
+              boxSizing: "border-box",
+              textAlign: "center",
+              padding: "10px",
+            }}
+          >
+            <img src="/assets/images/web images/Services/agen4.png" alt="" />
+          </div>
+          <div
+            className="col-md-3 box"
+            style={{
+              borderTop: "1px transparent",
+              borderBottom: "2px transparent",
+              borderRight: "2px solid #fff",
+              minHeight: "120px",
+              boxSizing: "border-box",
+              textAlign: "center",
+              padding: "10px",
+            }}
+          >
+            <img src="/assets/images/web images/Services/agen5.png" alt="" />
+          </div>
+          <div
+            className="col-md-3 box"
+            style={{
+              borderTop: "1px transparent",
+              borderBottom: "2px transparent",
+              borderRight: "2px solid #fff",
+              minHeight: "120px",
+              boxSizing: "border-box",
+              textAlign: "center",
+              padding: "10px",
+            }}
+          >
+            <img src="/assets/images/web images/Services/agen6.png" alt="" />
+          </div>
+          <div
+            className="col-md-3 box"
+            style={{
+              borderTop: "1px transparent",
+              borderBottom: "2px transparent",
+              borderRight: "2px solid #fff",
+              minHeight: "120px",
+              boxSizing: "border-box",
+              textAlign: "center",
+              padding: "10px",
+            }}
+          >
+            <img src="/assets/images/web images/Services/agen7.png" alt="" />
+          </div>
+          <div
+            className="col-md-3 box"
+            style={{
+              borderRight: "none",
+              borderBottom: "none",
+              minHeight: "120px",
+              boxSizing: "border-box",
+              textAlign: "center",
+              padding: "10px",
+            }}
+          >
+            <img src="/assets/images/web images/Services/agen8.png" alt="" />
+          </div>
         </div>
       </div>
-
       <div className="servicebg-overlay"></div>
     </div>
   );
