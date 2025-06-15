@@ -74,7 +74,7 @@ const Header = () => {
               </Link>
             </figure>
 
-            <div className="logo-heading-header">
+            <div className="logo-heading-header" style={{color: 'white'}}>
             <h1>
               HI5 Consulting
             </h1>

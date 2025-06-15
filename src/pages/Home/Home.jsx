@@ -36,7 +36,7 @@ const styles = {
     <div className="page-wrapper">
       {/* <div class="preloader"></div> */}
       <Header />
-      {/* <MobileMenu /> */}
+      <MobileMenu />
       {/* <BannerSection /> */}
     <div style={styles} className="job-banner d-flex align-items-center text-dark">
       <div className="container">

@@ -18,6 +18,19 @@ const Section = ({ serv }) => {
         )}
       </div>
       <div className="content">
+        <div className="image-content">
+          {/* <img
+            src="https://via.placeholder.com/500x300"
+            alt="Placeholder"
+            className="section-image"
+          /> */}
+          <img
+            src="/assets/images/web images/two_men_meeting.png"
+            alt="meeting two men"
+            style={{ objectFit: "contain" }}
+            className="image-placeholder"
+          />
+        </div>
         <div className="text-content-home">
           <h2 className="section-title">
             We are a client-needs driven company
@@ -32,19 +45,6 @@ const Section = ({ serv }) => {
             large, making sure we provide the best recruiting consulting
             services with the best.
           </p>
-        </div>
-        <div className="image-content">
-          {/* <img
-            src="https://via.placeholder.com/500x300"
-            alt="Placeholder"
-            className="section-image"
-          /> */}
-          <img
-                src="/assets/images/web images/two_men_meeting.png"
-                alt="meeting two men"
-                style={{objectFit: 'contain'}}
-                className="image-placeholder"
-              />
         </div>
       </div>
     </section>
