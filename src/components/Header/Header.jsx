@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Header.css'
+import "./Header.css";
 const Header = () => {
   return (
     <header className="main-header style-one">
@@ -74,14 +74,9 @@ const Header = () => {
               </Link>
             </figure>
 
-            <div className="logo-heading-header" style={{color: 'white'}}>
-            <h1>
-              HI5 Consulting
-            </h1>
-            <p>
-              Recruitment and Development
-            </p>
-
+            <div className="logo-heading-header" style={{ color: "white" }}>
+              <h1>HI5 Consulting</h1>
+              <p>Recruitment and Development</p>
             </div>
           </div>
           <div className="menu-area">
@@ -97,28 +92,32 @@ const Header = () => {
               >
                 <ul className="navigation clearfix">
                   <li className="current dropdown">
-                    <Link style={{color: 'black'}} to="/">Home</Link>
-                   
-                  </li>
-                  
-                  <li className="dropdown">
-                    <Link style={{color: 'black'}} to="/service">Services</Link>
-                    
+                    <Link style={{ color: "black" }} to="/">
+                      Home
+                    </Link>
                   </li>
 
                   <li className="dropdown">
-                    <Link style={{color: 'black'}} to="/capabilities">Capabilities</Link>
-                    
+                    <Link style={{ color: "black" }} to="/service">
+                      Services
+                    </Link>
                   </li>
 
-
-                  
+                  <li className="dropdown">
+                    <Link style={{ color: "black" }} to="/capabilities">
+                      Capabilities
+                    </Link>
+                  </li>
 
                   <li className="dropdown">
-                    <Link style={{color: 'black'}} to="/">Industries</Link>
+                    <Link style={{ color: "black" }} to="/">
+                      Industries
+                    </Link>
                     <ul>
                       <li>
-                        <Link style={{color: 'black'}} to="/recruiting">Recruiting</Link>
+                        <Link style={{ color: "black" }} to="/recruiting">
+                          Recruiting
+                        </Link>
                       </li>
                       {/* <li>
                         <Link style={{color: 'black'}} to="/development">Development</Link>
@@ -126,20 +125,20 @@ const Header = () => {
                     </ul>
                   </li>
 
-           
-
                   <li className="dropdown">
-                    <Link style={{color: 'black'}} to="/jobs">Jobs</Link>
-
+                    <Link style={{ color: "black" }} to="/jobs">
+                      Jobs
+                    </Link>
                   </li>
-
 
                   {/* <li className="dropdown">
                     <Link style={{color: 'black'}} to="/blog">Blog</Link>
                    
                   </li> */}
                   <li>
-                    <Link style={{color: 'black'}} to="/contact">Contact Us</Link>
+                    <Link style={{ color: "black" }} to="/contact">
+                      Contact Us
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -156,7 +155,10 @@ const Header = () => {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  <i className="flaticon-magnifying-glass" style={{color: 'black'}}></i>
+                  <i
+                    className="flaticon-magnifying-glass"
+                    style={{ color: "black" }}
+                  ></i>
                 </button>
                 <div
                   className="dropdown-menu search-panel"
@@ -191,12 +193,17 @@ const Header = () => {
       </div>
       <div className="sticky-header">
         <div className="outer-box">
-          <div className="logo-box">
+                    <div className="logo-box-header">
             <figure className="logo">
               <Link to="/">
-                <img src="assets/images/logo.png" alt="" />
+                <img src="assets/images/logo/logo.png" alt="" />
               </Link>
             </figure>
+
+            <div className="logo-heading-header">
+              <h1 style={{ color: "white" }}>HI5 Consulting</h1>
+              <p>Recruitment and Development</p>
+            </div>
           </div>
           <div className="menu-area">
             <nav className="main-menu navbar-expand-md navbar-light">
@@ -207,17 +214,14 @@ const Header = () => {
                 <ul className="navigation clearfix">
                   <li className="current dropdown">
                     <Link to="/">Home</Link>
-                    
                   </li>
-                 
+
                   <li className="dropdown">
                     <Link to="/service">Services</Link>
-                   
                   </li>
 
                   <li className="dropdown">
                     <Link to="/capabilities">Capabilities</Link>
-                    
                   </li>
 
                   <li className="dropdown">
@@ -232,15 +236,9 @@ const Header = () => {
                     </ul>
                   </li>
 
-
-               
                   <li className="dropdown">
                     <Link to="/jobs">Jobs</Link>
-
                   </li>
-
-
-
 
                   {/* <li className="dropdown">
                     <Link to="/">Blog</Link>
