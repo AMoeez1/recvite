@@ -5,7 +5,7 @@ import "./NewsLetter.css";
 function NewsLetter() {
   return (
     <>
-      <div
+      {/* <div
         className="newsletter-section p-5"
         style={{
           background:
@@ -32,7 +32,7 @@ function NewsLetter() {
             </button>
           </div>
         </form>
-      </div>
+      </div> */}
       <div
         className="newsletter-section p-5"
         style={{
@@ -51,8 +51,12 @@ function NewsLetter() {
         </div>
         <form className="newsletter-form">
           <input
-          className="px-1"
-            style={{ background: "none", color: "#f2f2f2", border: '1px solid #f2f2f2' }}
+            className="px-1"
+            style={{
+              background: "none",
+              color: "#f2f2f2",
+              border: "1px solid #f2f2f2",
+            }}
             type="email"
             placeholder="Your email address"
             aria-label="Email address"

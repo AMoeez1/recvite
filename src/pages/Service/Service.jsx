@@ -106,15 +106,19 @@ const Service = () => {
         subtitle=""
         image={Google}
       />
-      <div className="row mx-0 text-center">
-        <h1 className="mt-5 mb-4 loveservice">
-          FALL IN LOVE WITH OUR SERVICES
+      <div className="">
+        <h1
+          className="industrytitle my-5 text-center"
+          style={{ fontWeight: "bolder" }}
+        >
+          Falling in love with our services
         </h1>
-        <div className="elementor-divider">
-          <p
-            className="elementor-divider-separator"
-            style={{ borderColor: "#b7abe3" }}
-          ></p>
+        <div className="d-flex justify-content-center my-5">
+          <img
+            src="/assets/images/web images/industrydot.JPG"
+            alt="decorative dots"
+            style={{ marginTop: "10px", maxWidth: "100%" }}
+          />
         </div>
       </div>
       <Agencies />
