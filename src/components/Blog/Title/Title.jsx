@@ -7,7 +7,7 @@ const PageTitle = ({ text, title, desc, detail, image }) => {
     <section
       className="page-title centred"
       style={{
-        backgroundImage: image,
+        background: image,
         minHeight: '100vh',
       }}
     >

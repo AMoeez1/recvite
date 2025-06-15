@@ -13,7 +13,7 @@ import Error from "./pages/404/Error";
 import FAQ from "./pages/FAQ/FAQ";
 import Jobs from "./pages/Jobs/Jobs";
 import JobDetail from "./pages/JobDetail/JobDetail";
-import Recruiting from "./pages/Recruiting/Recruiting";
+import {Recruiting} from "./pages/Recruiting/Recruiting";
 import Development from "./pages/Development/Development";
 import Capabilities from "./pages/Capabilities/Capabilities";
 import PositionDetail from "./pages/PositionDetail/PositionDetail";

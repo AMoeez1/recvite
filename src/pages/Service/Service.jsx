@@ -45,12 +45,12 @@
 
 import { ServiceLeft } from "./ServiceLeft";
 import { ServiceRight } from "./ServiceRight";
-import { Agencies } from "./Agencies";
+import Agencies from "./Agencies";
 import PageTitle from "../../components/Blog/Title/Title";
-import Socialmediaprofile from './images/41389-interview-get-ready-to-work-job-recruitment-isometric-hiring-process-1.json';
-import Webdevelop from './images/39998-web-development.json';
-import Socialmedia from './images/30953-social-media-marketing.json';
-import Google from './images/35621-google-icons-search.json';
+import Socialmediaprofile from "./images/41389-interview-get-ready-to-work-job-recruitment-isometric-hiring-process-1.json";
+import Webdevelop from "./images/39998-web-development.json";
+import Socialmedia from "./images/30953-social-media-marketing.json";
+import Google from "./images/35621-google-icons-search.json";
 import Vector from "./images/lf30_editor_vlx28ylv.json";
 import Header from "../../components/Header/Header";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
@@ -60,8 +60,8 @@ import Footer from "../../components/Footer/Footer";
 const Service = () => {
   return (
     <>
-    <Header />
-          <MobileMenu />
+      <Header />
+      <MobileMenu />
       <PageTitle
         title={"Recruitment & Development"}
         text={
@@ -118,8 +118,8 @@ const Service = () => {
         </div>
       </div>
       <Agencies />
-            <NewsLetter />
-            <Footer />
+      <NewsLetter />
+      <Footer />
     </>
   );
 };
