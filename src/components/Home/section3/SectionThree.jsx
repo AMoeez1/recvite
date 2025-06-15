@@ -1,54 +1,28 @@
-import React from "react";
-import "./SectionThree.css";
+import { useLottie } from "lottie-react";
 
-const Section = ({ serv }) => {
-  return (
-    <section className="section-container">
-      <div className="header">
-        {serv ? (
-          <>
-            <div className="horizontal-line-serv"></div>
-            {/* <span className="header-line">EXPLORE OUR EXPERTISE</span> */}
-          </>
-        ) : (
-          <>
-            <div className="horizontal-line"></div>
-            <span className="header-line">EXPLORE OUR EXPERTISE</span>
-          </>
-        )}
-      </div>
-      <div className="content">
-        <div className="image-content">
-          {/* <img
-            src="https://via.placeholder.com/500x300"
-            alt="Placeholder"
-            className="section-image"
-          /> */}
-          <img
-            src="/assets/images/web images/two_men_meeting.png"
-            alt="meeting two men"
-            style={{ objectFit: "contain" }}
-            className="image-placeholder"
-          />
-        </div>
-        <div className="text-content-home">
-          <h2 className="section-title">
-            We are a client-needs driven company
-          </h2>
-          <p className="section-description">
-            Our job is to make sure that you have the peace of mind when hiring
-            an individual while working on securing a permanent contract with
-            different agencies. Our reach goes out to different industries and
-            business realms through which we have made a trustworthy network of
-            professional candidates filling in the in-demand jobs. Our network
-            spans across the USA as well, connected to enterprises, small or
-            large, making sure we provide the best recruiting consulting
-            services with the best.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-};
+const SectionThree=({title,para,subtitle,image})=>{
 
-export default Section;
+    const options = {
+        animationData:image,
+        loop: true
+      };
+      const { View } = useLottie(options);
+
+    return(
+        <div className="container">
+            <div className="row mb-4">
+                <div className="col-md-6 d-flex align-items-stretch mt-17">
+                    {View}
+               </div>
+                <div className="col-md-6 mmt-0" style={{marginTop: '65px'}}>
+                  <h6 className="subtitle">{subtitle}</h6>
+                  <h3 className="mt-4 mb-2 content-title">{title}</h3>
+                  <div className="homecontentpara">
+                  <p>{para}</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+export default SectionThree;
