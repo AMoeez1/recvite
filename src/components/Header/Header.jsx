@@ -156,7 +156,7 @@ const Header = () => {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  <i className="flaticon-magnifying-glass"></i>
+                  <i className="flaticon-magnifying-glass" style={{color: 'black'}}></i>
                 </button>
                 <div
                   className="dropdown-menu search-panel"

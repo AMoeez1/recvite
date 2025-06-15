@@ -12,7 +12,7 @@ const Footer = () => {
       >
         <div className="auto-container">
           <div className="footer-info clearfix">
-            <FooterInfoItem
+            {/* <FooterInfoItem
               icon="flaticon-mail"
               title="Email"
               content={
@@ -30,7 +30,7 @@ const Footer = () => {
               icon="flaticon-address"
               title="Address"
               content="Suite 20 Golden Street USA"
-            />
+            /> */}
           </div>
           <div className="widget-section" style={{ padding: "30px 10px" }}>
             <div className="row clearfix">
