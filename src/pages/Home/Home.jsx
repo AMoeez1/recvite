@@ -33,6 +33,13 @@ const Home = () => {
     padding: "60px 0",
   };
 
+   const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="page-wrapper">
       {/* <div class="preloader"></div> */}
@@ -134,7 +141,7 @@ const Home = () => {
       <NewsLetter />
       <Footer />
 
-      <button class="scroll-top scroll-to-target" data-target="html">
+      <button class="scroll-top scroll-to-target" data-target="html" onClick={scrollToTop}>
         <span class="fa fa-arrow-up"></span>
       </button>
     </div>
